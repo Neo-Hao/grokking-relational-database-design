@@ -5,7 +5,6 @@ CREATE TABLE `product` (
     `Manufacturer` TEXT NOT NULL,
     `Name` TEXT NOT NULL,
     `Description` text NOT NULL,
-    `Photo` TEXT DEFAULT NULL,
     `Price` decimal(5, 2) NOT NULL,
     PRIMARY KEY (`ProductId`)
 );
@@ -18,7 +17,6 @@ VALUES
         'Mad Inventors Inc.',
         'Atomic Nose Hair Trimmer',
         'Trim your nose hairs with the precision of an atomic clock!',
-        'photos/atomic.png',
         19.99
     ),
     (
@@ -26,7 +24,6 @@ VALUES
         'Goofy Gadgets Corp.',
         'Selfie Toaster',
         'Get your face on your toast every morning with our selfie toaster!',
-        'photos/selifet.png',
         24.99
     ),
     (
@@ -34,7 +31,6 @@ VALUES
         'Absurd Accessories',
         'Cat-Poop Coffee',
         'The only coffee made from the finest cat poop beans!',
-        'photos/catpoop.png',
         29.99
     ),
     (
@@ -42,7 +38,6 @@ VALUES
         'Wacky Wares Ltd.',
         'Inflatable Briefcase',
         'Need more storage space? Inflate our briefcase to double its size!',
-        'photos/inflatable.png',
         39.99
     ),
     (
@@ -50,8 +45,42 @@ VALUES
         'Silly Supplies Co.',
         'Unicorn Horn Polish',
         'Keep your unicorn''s horn shiny and smooth with our magical polish!',
-        'photos/unicorn.png',
         9.99
+    ),
+    (
+        6,
+        'Mad Inventors Inc.',
+        'The Mind Probe',
+        'A device from Star Wars that can extract information directly from a person''s mind.',
+        19.99
+    ),
+    (
+        7,
+        'Mad Inventors Inc.',
+        'Lightsabers',
+        'Elegant and deadly energy swords wielded by Jedi and Sith alike.',
+        25
+    ),
+    (
+        8,
+        'Absurd Accessories',
+        'The Sonic Screwdriver',
+        'A versatile tool capable of performing a wide variety of tasks, from unlocking doors to repairing electronics.',
+        15.1
+    ),
+    (
+        9,
+        'Silly Supplies Co.',
+        'The Infinite Improbability Generator',
+        'A device that can create impossible and absurd events, such as a spaceship suddenly turning into a giant sperm whale.',
+        9.99
+    ),
+    (
+        10,
+        'Silly Supplies Co.',
+        'The Neuralyzer',
+        'A flashy device that erases people''s memories of specific events or encounters.',
+        33.55
     );
 
 DROP TABLE IF EXISTS `user`;
@@ -72,7 +101,7 @@ VALUES
     (
         1,
         'SirLaughs',
-        '	sirlaughs@funny.com',
+        'sirlaughs@funny.com',
         '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'Chuckles',
         'McPhee'
@@ -88,7 +117,7 @@ VALUES
     (
         3,
         'Laughing',
-        '	laughingoutloud@gmail.com',
+        'laughingoutloud@gmail.com',
         'e4ad93ca07acb8d908a3aa41e920ea4f4ef4f26e7f86cf8291c5db289780a5ae',
         'Giggles',
         'O''Malley'
