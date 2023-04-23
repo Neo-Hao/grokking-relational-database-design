@@ -1,21 +1,21 @@
 DROP TABLE IF EXISTS product;
 
 CREATE TABLE product (
-    ProductID INT NOT NULL,
-    Name TEXT NOT NULL,
-    Description TEXT NOT NULL,
-    Price DECIMAL(5, 2) NOT NULL,
-    Manufacturer TEXT NOT NULL,
-    PRIMARY KEY (ProductID)
+    product_id INT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(5, 2) NOT NULL,
+    manufacturer TEXT NOT NULL,
+    PRIMARY KEY (product_id)
 );
 
 INSERT INTO
     product (
-        ProductID,
-        Name,
-        Description,
-        Price,
-        Manufacturer
+        product_id,
+        name,
+        description,
+        price,
+        manufacturer
     )
 VALUES
     (
