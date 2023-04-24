@@ -1,10 +1,6 @@
--- Connect to a new or existing database file
--- Connect to the database
-ATTACH DATABASE 'onlinestore.db' AS onlinestore;
+DROP TABLE IF EXISTS product;
 
-DROP TABLE IF EXISTS onlinestore.product;
-
-CREATE TABLE onlinestore.product (
+CREATE TABLE product (
     product_id INT NOT NULL,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
@@ -14,7 +10,7 @@ CREATE TABLE onlinestore.product (
 );
 
 INSERT INTO
-    onlinestore.product (
+    product (
         product_id,
         name,
         description,
@@ -92,6 +88,3 @@ VALUES
         33.55,
         'Silly Supplies Co.'
     );
-
--- Close the database connection
-DETACH onlinestore;
