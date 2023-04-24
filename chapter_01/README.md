@@ -14,7 +14,7 @@ The script prepared for SQLite online is `sqlite_online.sql`. You can load the p
 
 Now you should see the script executed in the right sidebar. You are ready to type into the console, follow the book, and execute SQL queries.
 
-![SQLite Online](sqlite_online.png)
+![](./images/sqlite_online.png){width=70%}
 
 ## SQLite database
 
