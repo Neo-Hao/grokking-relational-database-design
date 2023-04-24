@@ -9,12 +9,12 @@ SQLite online is a web-based tool that you can use to execute SQL queries. You c
 The script prepared for SQLite online is `sqlite_online.sql`. You can load the prepared script by:
 
 1. Navigate to SQLite Online (https://sqliteonline.com)
-2. Click *Import* and load `sqlite_online.sql`
-3. Click *Okay*
+2. Click _Import_ and load `sqlite_online.sql`
+3. Click _Okay_
 
 Now you should see the script executed in the right sidebar. You are ready to type into the console, follow the book, and execute SQL queries.
 
-![](./images/sqlite_online.png){width=70%}
+<img src="./images/sqlite_online.png" alt="sqlite online" style="width:'70%';">
 
 ## SQLite database
 
@@ -37,6 +37,7 @@ Connected to a transient in-memory database.
 Use ".open FILENAME" to reopen on a persistent database.
 sqlite>
 ```
+
 You can quit by typing `.quit` and pressing `Enter`, or press `Command + D`.
 
 If you don't have SQLite installed, you can download the precompiled binaries for Mac OS from [SQLite website](https://www.sqlite.org/download.html), extract the archive, right click on the sqlite3 file, and click Open. This will allow you to execute a file from an untrusted developer.
@@ -60,7 +61,8 @@ The script prepared for SQLite database is `sqlite_db.sql`. You can load the pre
 ```
     sqlite3 onlinestore.db
 ```
-4. Run the following command to load the script: 
+
+4. Run the following command to load the script:
 
 ```
     sqlite> .read sqlite_db.sql
@@ -70,7 +72,7 @@ The script prepared for SQLite database is `sqlite_db.sql`. You can load the pre
 
 ```
     sqlite> .tables
-``` 
+```
 
 If you see `products`, that means the script is loaded successfully, and the `product` table has been created.
 
@@ -84,6 +86,6 @@ The script prepared for MariaDB database is `mariadb_db.sql`. You can load the p
 
 ## MySQL database
 
-MySQL is a popular open-source RDBMS. You can download it from [MySQL website](https://www.mysql.com/downloads/). 
+MySQL is a popular open-source RDBMS. You can download it from [MySQL website](https://www.mysql.com/downloads/).
 
 The script prepared for MySQL database is `mysql_db.sql`. You can load the prepared script by:
