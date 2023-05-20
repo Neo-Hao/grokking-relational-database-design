@@ -140,7 +140,7 @@ service mysql stop
 
 ### Load the prepared script
 
-The script prepared for SQLite database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
+The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
@@ -248,7 +248,7 @@ service postgresql start
 
 ### Load the prepared script
 
-The script prepared for SQLite database is [`postgresql_db.sql`](./postgresql_db.sql). You can load the prepared script by:
+The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresql_db.sql). You can load the prepared script by:
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
