@@ -2,6 +2,23 @@
 
 The scripts that you can use to create databases/tables for this chapter are all contained in this folder. We will describe a few approaches to load the prepared scripts using different RDBMS and tools.
 
+- [SQLite online](#sqlite-online)
+- [SQLite database](#sqlite-database)
+    - [Install SQLite on Mac](#install-sqlite-on-mac)
+    - [Install SQLite on Windows](#install-sqlite-on-windows)
+    - [Install SQLite on Linux](#install-sqlite-on-linux)
+    - [Load the prepared script](#load-the-prepared-script)
+- [MySQL database](#mysql-database)
+    - [Install and start MySQL on Mac](#install-and-start-mysql-on-mac)
+    - [Install and start MySQL on Windows](#install-and-start-mysql-on-windows)
+    - [Install and start MySQL on Linux](#install-and-start-mysql-on-linux)
+    - [Load the prepared script](#load-the-prepared-script-1)
+- [PostgreSQL database](#postgresql-database)
+    - [Install and start PostgreSQL on Mac](#install-and-start-postgresql-on-mac)
+    - [Install and start PostgreSQL on Windows](#install-and-start-postgresql-on-windows)
+    - [Install and start PostgreSQL on Linux](#install-and-start-postgresql-on-linux)
+    - [Load the prepared script](#load-the-prepared-script-2)
+
 ## SQLite online
 
 SQLite online is a web-based tool that you can use to execute SQL queries. You can access it at [SQLite online](https://sqliteonline.com/).
@@ -56,33 +73,31 @@ The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). Y
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
-3. Run the following command, and you will be in the SQLite console:
+3. Run the following command, and you will be in the SQLite console environment:
 
 ```
-    sqlite3 onlinestore.db
+sqlite3 onlinestore.db
 ```
 
-4. Run the following command to load the script:
+4. In the same SQLite console environment (e.g., the line prompt starts with `sqlite>`), run the following command to load the script:
 
 ```
-    sqlite> .read sqlite_db.sql
+.read sqlite_db.sql
 ```
 
-5. Check if the table is created by running the following command:
+5. In the same SQLite console environment, check if the table is created by running the following command:
 
 ```
-    sqlite> .tables
+.tables
 ```
 
-If you see `products`, that means the script is loaded successfully, and the `product` table has been created.
-
-You can always quit the SQLite console by typing `.quit` and pressing `Enter`.
+If you see `products`, that means the script is loaded successfully, and the `product` table has been created. In the same SQLite console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the SQLite console by typing `.quit` and pressing `Enter`.
 
 ## MySQL database
 
 MySQL is a popular open-source RDBMS. We would recommend you to install MySQL in different ways depending on your operating system.
 
-### Install MySQL on Mac
+### Install and start MySQL on Mac
 
 The recommended approach to install MySQL on a Mac is via [Homebrew](https://brew.sh/). If you don't have Homebrew installed, you can find the latest installation instructions on [Homebrew website](https://brew.sh/), and follow the instructions to install Homebrew first.
 
@@ -104,7 +119,7 @@ You can always stop MySQL by running the following command:
 brew services stop mysql
 ```
 
-### Install MySQL on Windows
+### Install and start MySQL on Windows
 
 If you are using a Windows, you can download the ZIP file for Windows from [MySQL website](https://dev.mysql.com/downloads/mysql/), extract the archive, right click on the mysql.exe file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
 
@@ -122,7 +137,7 @@ mysqld --console
 
 When you need to stop MySQL, you can simply press Ctrl+C in the Command Prompt window where the server is running. This will stop the server and return you to the command prompt.
 
-### Install MySQL on Linux
+### Install and start MySQL on Linux
 
 You are recommended to follow the steps listed on [the MySQL official website](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install-linux-quick.html) to install MySQL on a Linux machine.
 
@@ -144,7 +159,7 @@ The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You 
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
-3. Run the following command, and you will be in the SQLite console:
+3. Run the following command:
 
 ```
     mysql -u root < mysql_db.sql
@@ -156,13 +171,21 @@ If you have set up a password for your MySQL server, you can run the following c
     mysql -u root -p < mysql_db.sql
 ```
 
-After that, you will be prompted to enter your password.
+After that, you will be prompted to enter your password. 
+
+Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the MySQL console environment. You can do this by running the following command:
+
+```
+mysql -u root
+```
+
+In the MySQL console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the MySQL console by typing `quit` and pressing `Enter`.
 
 ## PostgreSQL database
 
 PostgreSQL is a popular open-source RDBMS. If you don't have PostgreSQL installed on your computer, you can follow the following approaches to install SQLite.
 
-### Install PostgreSQL on Mac
+### Install and start PostgreSQL on Mac
 
 The recommended approach to install MySQL on a Mac is via [Homebrew](https://brew.sh/). If you don't have Homebrew installed, you can find the latest installation instructions on [Homebrew website](https://brew.sh/), and follow the instructions to install Homebrew first.
 
@@ -211,7 +234,7 @@ The above command assumes that you run it from the root directory `/`. If you ar
 sudo ./createuser -s postgres
 ```
 
-### Install PostgreSQL on Windows
+### Install and start PostgreSQL on Windows
 
 If you are using a Windows, you can download the ZIP file for Windows from [PostgreSQL website](https://www.postgresql.org/download/windows/), extract the archive, right click on the psql.exe file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
 
@@ -230,7 +253,7 @@ net stop postgresql-version-number
 You will need to replace the `version-number` with the version number of your PostgreSQL installation.
 
 
-### Install PostgreSQL on Linux
+### Install and start PostgreSQL on Linux
 
 You are recommended to follow the steps listed on [the PostgreSQL official website](https://www.postgresql.org/download/linux/) to install PostgreSQL on a Linux machine.
 
@@ -252,8 +275,16 @@ The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresq
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
-3. Run the following command, and you will be in the SQLite console:
+3. Run the following command:
 
 ```
 psql -U postgres -f postgresql_db.sql
 ```
+
+Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the PostgreSQL console environment. You can do this by running the following command:
+
+```
+psql -U postgres
+```
+
+In the console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.
