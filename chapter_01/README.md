@@ -6,7 +6,7 @@ The scripts that you can use to create databases/tables for this chapter are all
 
 SQLite online is a web-based tool that you can use to execute SQL queries. You can access it at [SQLite online](https://sqliteonline.com/).
 
-The script prepared for SQLite online is `sqlite_online.sql`. You can load the prepared script by:
+The script prepared for SQLite online is [`sqlite_online.sql`](./sqlite_online.sql). You can load the prepared script by:
 
 1. Navigate to SQLite Online (https://sqliteonline.com)
 2. Click _Import_ and load `sqlite_online.sql`
@@ -52,7 +52,7 @@ If you are using a Linux, you can download the ZIP file for Linux from [SQLite w
 
 ### Load the prepared script
 
-The script prepared for SQLite database is `sqlite_db.sql`. You can load the prepared script by:
+The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). You can load the prepared script by:
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
@@ -140,7 +140,7 @@ service mysql stop
 
 ### Load the prepared script
 
-The script prepared for SQLite database is `mysql_db.sql`. You can load the prepared script by:
+The script prepared for SQLite database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
@@ -205,7 +205,7 @@ When you locate the `createuser` command, you can run the following command to c
 sudo /opt/homebrew/opt/postgresql@14/bin/createuser -s postgres
 ```
 
-The above command assumes that you run it starting from the root directory `/`. If you run it from the directory where you found the `createuser` command, you can simply run the following command:
+The above command assumes that you run it from the root directory `/`. If you are in the directory where you found the `createuser` command, you can simply run the following command:
 
 ```
 sudo ./createuser -s postgres
@@ -248,12 +248,12 @@ service postgresql start
 
 ### Load the prepared script
 
-The script prepared for SQLite database is `postgresql_db.sql`. You can load the prepared script by:
+The script prepared for SQLite database is [`postgresql_db.sql`](./postgresql_db.sql). You can load the prepared script by:
 
 1. Open the terminal
 2. Navigate to the folder where you have downloaded the script
 3. Run the following command, and you will be in the SQLite console:
 
 ```
-    psql -U postgres -f postgresql_db.sql
+psql -U postgres -f postgresql_db.sql
 ```
