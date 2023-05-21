@@ -1,3 +1,10 @@
+/*****************************************************************************
+ Create Date:    05/20/2023
+ Author:         Qiang Hao
+ Description:    Create a product table and insert some data for the onlinestore database.
+ Note:           This script is for the tool named SQLite Online.
+*************************************************************************************/
+
 DROP TABLE IF EXISTS product;
 
 CREATE TABLE product (

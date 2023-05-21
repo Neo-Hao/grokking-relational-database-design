@@ -7,17 +7,17 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Install SQLite on Mac](#install-sqlite-on-mac)
     - [Install SQLite on Windows](#install-sqlite-on-windows)
     - [Install SQLite on Linux](#install-sqlite-on-linux)
-    - [Load the prepared SQLite script](#load-the-prepared-sqlite-script)
+    - [Load the prepared script](#load-the-prepared-script)
 - [MySQL database](#mysql-database)
     - [Install and start MySQL on Mac](#install-and-start-mysql-on-mac)
     - [Install and start MySQL on Windows](#install-and-start-mysql-on-windows)
     - [Install and start MySQL on Linux](#install-and-start-mysql-on-linux)
-    - [Load the prepared MySQL script](#load-the-prepared-mysql-script)
+    - [Load the prepared script](#load-the-prepared-script-1)
 - [PostgreSQL database](#postgresql-database)
     - [Install and start PostgreSQL on Mac](#install-and-start-postgresql-on-mac)
     - [Install and start PostgreSQL on Windows](#install-and-start-postgresql-on-windows)
     - [Install and start PostgreSQL on Linux](#install-and-start-postgresql-on-linux)
-    - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
+    - [Load the prepared script](#load-the-prepared-script-2)
 
 ## SQLite online
 
@@ -67,24 +67,25 @@ If you are using a Windows, you can download the ZIP file for Windows from [SQLi
 
 If you are using a Linux, you can download the ZIP file for Linux from [SQLite website](https://www.sqlite.org/download.html), extract the archive, right click on the sqlite3 file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
 
-### Load the prepared SQLite script
+### Load the prepared script
 
 The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). You can load the prepared script by:
 
-1. Open the terminal, navigate into the `chapter_01` folder of this repository
-2. Run the following command, and you will be in the SQLite console environment:
+1. Open the terminal
+2. Navigate to the folder where you have downloaded the script
+3. Run the following command, and you will be in the SQLite console environment:
 
 ```
 sqlite3 onlinestore.db
 ```
 
-3. In the same SQLite console environment (e.g., the line prompt starts with `sqlite>`), run the following command to load the script:
+4. In the same SQLite console environment (e.g., the line prompt starts with `sqlite>`), run the following command to load the script:
 
 ```
 .read sqlite_db.sql
 ```
 
-4. In the same SQLite console environment, check if the table is created by running the following command:
+5. In the same SQLite console environment, check if the table is created by running the following command:
 
 ```
 .tables
@@ -152,12 +153,13 @@ To stop MySQL, you can run the following command:
 service mysql stop
 ```
 
-### Load the prepared MySQL script
+### Load the prepared script
 
 The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
 
-1. Open the terminal, navigate into the `chapter_01` folder of this repository
-2. Run the following command:
+1. Open the terminal
+2. Navigate to the folder where you have downloaded the script
+3. Run the following command:
 
 ```
     mysql -u root < mysql_db.sql
@@ -267,35 +269,22 @@ To stop PostgreSQL, you can run the following command:
 service postgresql start
 ```
 
-### Load the prepared PostgreSQL script
+### Load the prepared script
 
-Before loading the script, you will need to create a database named `onlinestore` and use this database via the PostgreSQL console environment first. Different from SQLite and MySQL, there are no easy approach to merge these two steps into the script. 
+The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresql_db.sql). You can load the prepared script by:
 
-You can follow the following steps to load the prepared script:
+1. Open the terminal
+2. Navigate to the folder where you have downloaded the script
+3. Run the following command:
 
-1. Open the terminal, and navigate into the `chapter_01` folder of this repository
+```
+psql -U postgres -f postgresql_db.sql
+```
 
-2. Log in to the PostgreSQL console environment by running the following command:
+Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the PostgreSQL console environment. You can do this by running the following command:
 
 ```
 psql -U postgres
 ```
-3. In the console environment, create a database named `onlinestore` by running the following command:
 
-```
-CREATE DATABASE onlinestore;
-```
-
-4. In the console environment, use the database `onlinestore` by running the following command:
-
-```
-\c onlinestore
-```
-
-5. Now you are ready to load the prepared script. The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresql_db.sql). In the console environment, run the following command:
-
-```
-\i postgresql_db.sql
-```
-
-In the same console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.
+In the console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.

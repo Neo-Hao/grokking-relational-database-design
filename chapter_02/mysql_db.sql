@@ -1,11 +1,3 @@
-/*****************************************************************************
- RDBMS:          MySQL
- Create Date:    05/20/2023
- Author:         Qiang Hao
- Description:    Create a product table and insert some data for the onlinestore database.
- Note:          This script is for MySQL 8.0 or above.
-*************************************************************************************/
-
 CREATE DATABASE IF NOT EXISTS onlinestore;
 
 USE onlinestore;
@@ -99,4 +91,96 @@ VALUES
         'A flashy device that erases people''s memories of specific events or encounters.',
         33.55,
         'Silly Supplies Co.'
+    );
+
+DROP TABLE IF EXISTS review;
+
+CREATE TABLE review (
+    review_id BIGINT NOT NULL,
+    product_id INT NOT NULL,
+    review_text TEXT NOT NULL,
+    datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (review_id),
+    CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
+);
+
+INSERT INTO
+    review (
+        review_id,
+        product_id,
+        review_text,
+        datetime
+    )
+VALUES
+    (
+        1,
+        3,
+        'Great product, would definitely recommend!',
+        '2022-01-01 12:30:00'
+    ),
+    (
+        2,
+        5,
+        'This is the best thing I have ever bought!',
+        '2022-01-02 13:45:00'
+    ),
+    (
+        3,
+        2,
+        'Not worth the money, would not recommend',
+        '2022-01-03 14:15:00'
+    ),
+    (
+        4,
+        4,
+        'Disappointing purchase. Wouldn''t buy again.',
+        '2022-01-04 15:00:00'
+    ),
+    (
+        5,
+        1,
+        'Decent product for the price, happy with my purchase',
+        '2022-01-05 16:30:00'
+    ),
+    (
+        6,
+        2,
+        'Really impressed with the quality of this product!',
+        '2022-01-06 17:00:00'
+    ),
+    (
+        7,
+        4,
+        'Great value for the price, would buy again',
+        '2022-01-07 18:15:00'
+    ),
+    (
+        8,
+        3,
+        'Not the best quality, but it gets the job done',
+        '2022-01-08 19:00:00'
+    ),
+    (
+        9,
+        5,
+        'I am really happy with this purchase, it exceeded my expectations',
+        '2022-01-09 20:30:00'
+    ),
+    (
+        10,
+        1,
+        'Would not recommend this product, very disappointing',
+        '2022-01-10 21:00:00'
+    ),
+    (
+        11,
+        3,
+        'This product is great, I use it every day!',
+        '2022-01-11 22:15:00'
+    ),
+    (
+        12,
+        5,
+        'I would definitely buy this again, great value for the price',
+        '2022-01-12 23:00:00'
     );
