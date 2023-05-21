@@ -1,3 +1,14 @@
+/*****************************************************************************
+ RDBMS:         SQLite
+ Create Date:   05/20/2023
+ Author:        Qiang Hao
+ Description:   Create a pair of two related tables, product and review, 
+                and insert some data into the two tables that support the 
+                onlinestore database.
+ Note:          This script is for SQLite.
+*************************************************************************************/
+
+
 -- Connect to a new or existing database file
 -- Connect to the database
 ATTACH DATABASE 'onlinestore.db' AS onlinestore;

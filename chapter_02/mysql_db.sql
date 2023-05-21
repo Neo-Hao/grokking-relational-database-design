@@ -1,3 +1,13 @@
+/*****************************************************************************
+ RDBMS:         MySQL
+ Create Date:   05/20/2023
+ Author:        Qiang Hao
+ Description:   Create a pair of two related tables, product and review, 
+                and insert some data into the two tables that support the 
+                onlinestore database.
+ Note:          This script is for MySQL 8.0 or above.
+*************************************************************************************/
+
 CREATE DATABASE IF NOT EXISTS onlinestore;
 
 USE onlinestore;

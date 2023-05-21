@@ -1,3 +1,14 @@
+/*****************************************************************************
+ RDBMS:          PostgreSQL
+ Create Date:    05/20/2023
+ Author:         Qiang Hao
+ Description:    Create a pair of two related tables, product and review, 
+                 and insert some data into the two tables that support the 
+                 onlinestore database.
+ Note 1:         This script is for PostgreSQL 14 or above.
+ Note 2:         This script assumes that a database is created and used.
+*************************************************************************************/
+ 
 DROP TABLE IF EXISTS product;
 
 CREATE TABLE product (
