@@ -33,7 +33,7 @@ SQLite is a lightweight RDBMS that you can use on your computer. If you don't ha
 
 ### Install SQLite
 
-In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md) in the `chapter_01` folder to install SQLite first.
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#sqlite-database) in the `chapter_01` folder to install SQLite first.
 
 ### Load the prepared SQLite script
 
@@ -66,7 +66,7 @@ MySQL is a popular open-source RDBMS. We would recommend you to install MySQL in
 
 ### Install and start MySQL
 
-In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md) in the `chapter_01` folder to install MySQL first.
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/##mysql-database) in the `chapter_01` folder to install MySQL first.
 
 ### Load the prepared MySQL script
 
@@ -101,7 +101,7 @@ PostgreSQL is a popular open-source RDBMS. If you don't have PostgreSQL installe
 
 ### Install and start PostgreSQL
 
-In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md) in the `chapter_01` folder to install PostgreSQL first.
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#postgresql-database) in the `chapter_01` folder to install PostgreSQL first.
 
 ### Load the prepared PostgreSQL script
 
