@@ -61,7 +61,7 @@ If you don't have SQLite installed, you can download the precompiled binaries fo
 
 ### Install SQLite on Windows
 
-If you are using a Windows, you can download the ZIP file for Windows from [SQLite website](https://www.sqlite.org/download.html), extract the archive, right click on the sqlite3 file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
+If you are using a Windows, you can download the ZIP file for Windows from [SQLite website](https://www.sqlite.org/download.html), (Look for this sqlite-tools-win32-x86-xxxxx.zip) extract the archive, right click on the sqlite3 file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
 
 ### Install SQLite on Linux
 
