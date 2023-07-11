@@ -6,7 +6,7 @@ The file demonstrates the final state of entities as described in Chapter 4. You
 
 ## ch3-er-diagram.sql
 
-The file generates tables in a database based on the final state of entities as described in Chapter 4. Refer to [../chapter_01/README.md](README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
+The file generates tables in a database based on the final state of entities as described in Chapter 4. Refer to [/chapter_01/README.md](README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
 
 ## ch3-er-diagram.mwb
 
