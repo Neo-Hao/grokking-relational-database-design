@@ -1,14 +1,14 @@
 # Chapter 04 - Entities and Attributes
 
-## ch3-er-diagram.png
+## ch4-er-diagram.png
 
 The file demonstrates the final state of entities as described in Chapter 4. You can use an image viewer (e.g., Windows Photos) to view the entities.
 
-## ch3-er-diagram.sql
+## ch4-er-diagram.sql
 
 The file generates tables in a database based on the final state of entities as described in Chapter 4. Refer to [/chapter_01/README.md](README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
 
-## ch3-er-diagram.mwb
+## ch4-er-diagram.mwb
 
 The file is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 
