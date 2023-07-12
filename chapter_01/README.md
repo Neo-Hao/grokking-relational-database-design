@@ -94,7 +94,7 @@ If you see `products`, that means the script is loaded successfully, and the `pr
 
 ## MySQL database
 
-MySQL is a popular open-source RDBMS. We would recommend you to install MySQL in different ways depending on your operating system.
+MySQL is a popular open-source RDBMS. We would recommend you to install MySQL in different ways depending on your operating system. 
 
 ### Install and start MySQL on Mac
 
@@ -120,21 +120,21 @@ brew services stop mysql
 
 ### Install and start MySQL on Windows
 
-If you are using a Windows, you can download the ZIP file for Windows from [MySQL website](https://dev.mysql.com/downloads/mysql/), extract the archive, right click on the mysql.exe file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
+If you are using a Windows, you can download the ZIP file for Windows from [MySQL website](https://dev.mysql.com/downloads/mysql/). Use the installer and download the full installer (e.g., mysql-installer-community-8.0.33.0.msi) (not the web installer). Note: You do not have to make an Oracle account, look for the "No thanks, just start my download" at the bottom of the page.
 
-After installation, you may need to start the MySQL server. The process may vary slightly depending on the version you have installed, but typically you can follow these steps:
+1. Double click on the installer and follow the instructions.
 
-1. Open the Windows Command Prompt. You can do this by pressing the Windows key, typing "Command Prompt," and selecting the Command Prompt application from the search results.
+2. Then hit "Add" from the right hand side panel of options.
 
-2. Navigate to the MySQL installation directory. By default, it is usually installed in "C:\Program Files\MySQL\MySQL Server X.X" (where "X.X" represents the version number).
+3. Proceed with installing the "Developer Default" setup type. Keep the default options in the proceeding dialogs.
 
-3. Once you're in the MySQL installation directory, run the following command to start the MySQL server:
+4. Setup a password for the super administrator (root) of the database system.
 
-```
-mysqld --console
-```
+5. Follow the steps for configuration of the products. Keep all settings as default. Enter the password that you just configured when/if asked for it.
 
-When you need to stop MySQL, you can simply press Ctrl+C in the Command Prompt window where the server is running. This will stop the server and return you to the command prompt.
+6. Once the installation is complete, type MySQL in the Start menu in Windows and click on the "MySQL 8.0 Command Line Client"
+
+7. When asked for a password, enter the one configured for the root user (super administrator).
 
 ### Install and start MySQL on Linux
 
@@ -156,6 +156,8 @@ service mysql stop
 
 The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
 
+#### Linux and Mac
+
 1. Open the terminal, navigate into the `chapter_01` folder of this repository
 2. Run the following command:
 
@@ -170,6 +172,43 @@ If you have set up a password for your MySQL server, you can run the following c
 ```
 
 After that, you will be prompted to enter your password. 
+
+#### Windows
+
+1. Open "MySQL 8.0 Command Line Client"
+
+2. Enter your root password. If the window closes it means that you either entered the password wrong or the database service is stopped. To start it, type taskmgr or "Task Manager" in the Start menu, then under Services look for MySQL80 and start the service if it is stopped.
+
+3. Use the following command (replace the path to point to the location that you have downloaded the SQL files):
+
+```
+source C:\Users\user\Downloads\database-design-from-scratch\chapter_01\mysql_db.sql
+```
+
+4. If you see the following, it means that everything was been imported correctly.
+
+```
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+```
+
+5. You can verify that the product has been imported by running the following commands:
+
+```
+USE onlinestore;
+SELECT * FROM product;
+```
+
+6. You should see records on a table.
+
+### Using the prepared MySQL script
 
 Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the MySQL console environment. You can do this by running the following command:
 
@@ -234,22 +273,11 @@ sudo ./createuser -s postgres
 
 ### Install and start PostgreSQL on Windows
 
-If you are using a Windows, you can download the ZIP file for Windows from [PostgreSQL website](https://www.postgresql.org/download/windows/), extract the archive, right click on the psql.exe file, and click Open. The software will then open in the command line and you can execute any sql commands after that.
+1. If you are using a Windows, you can download the Windows installer from [PostgreSQL website](https://www.postgresql.org/download/windows/).
 
-To start PostgreSQL, you can run the following command:
+2. Follow the installation instructions. When asked to setup a password make a note of it, this will be the super user (root) password for the database system.
 
-```
-net start postgresql-version-number
-```
-
-To stop PostgreSQL, you can run the following command:
-
-```
-net stop postgresql-version-number
-```
-
-You will need to replace the `version-number` with the version number of your PostgreSQL installation.
-
+3. At the end of the installation, you may skip installing additional tools from stack builder (they are not necessary for our purposes).
 
 ### Install and start PostgreSQL on Linux
 
@@ -271,6 +299,8 @@ service postgresql start
 
 Before loading the script, you will need to create a database named `onlinestore` and use this database via the PostgreSQL console environment first. Different from SQLite and MySQL, there are no easy approach to merge these two steps into the script. 
 
+#### Linux and Mac
+
 You can follow the following steps to load the prepared script:
 
 1. Open the terminal, and navigate into the `chapter_01` folder of this repository
@@ -280,6 +310,30 @@ You can follow the following steps to load the prepared script:
 ```
 psql -U postgres
 ```
+
+#### Windows
+
+1. Open the "SQL Shell (psql)" from the Start Menu.
+
+2. Hit enter to use the default option and provide the password when asked for the default user. This is a correct interaction that leads to successful prompt:
+
+```
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (15.3)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=#
+```
+
+### Create the database
+
 3. In the console environment, create a database named `onlinestore` by running the following command:
 
 ```
@@ -296,6 +350,23 @@ CREATE DATABASE onlinestore;
 
 ```
 \i postgresql_db.sql
+```
+
+OR you may provide an exact path
+
+```
+\i C:/Users/user/Downloads/database-design-from-scratch/chapter_01/postgresql_db.sql
+```
+
+Note: The slashes are not the normal ones used in Windows (\\) but the forward slash needs to be used instead (/).
+
+A successful import should show:
+
+```
+psql:C:/Users/tsike/Desktop/database-design-from-scratch/chapter_01/postgresql_db.sql:10: NOTICE:  table "product" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+INSERT 0 10
 ```
 
 In the same console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.
