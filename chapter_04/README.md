@@ -13,7 +13,7 @@ Open file ch4-er-diagram.png. The file demonstrates the final state of entities 
 - Visit the [dbdiagram.io](https://dbdiagram.io/home) website.
 - Click on the "Import Database" button on the left side of the page.
 - Click on the "Upload a file" button.
-- Select the file ch4-er-diagram.sql and click "Open".
+- Select the file ch4-er-diagram-mysql-mariadb.sql and click "Open".
 - Click on the "Import" button.
 - You can now view the current ER diagram. Changes can be made to the left. You can use "Export" to generate a new SQL file.
 
@@ -59,3 +59,6 @@ Refer to [README.md](../chapter_01/README.md) from Chapter 01 for instructions a
 Note: MySQL Workbench is an administration tool for MySQL as much as an ER diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
 
 Refer to [README.md](../chapter_01/README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
+
+## Other versions
+Versions for PostgreSQL, SQL Server, and sqllite are also provided for convenience. Look for the .sql file with appropriate database designation.
