@@ -1,4 +1,4 @@
-# Introduction to databases and SQL
+# Related tables and more SQL
 
 The scripts that you can use to create databases/tables for this chapter are all contained in this folder. We will describe a few approaches to load the prepared scripts using different RDBMS and tools.
 

@@ -1,64 +1,57 @@
-# Chapter 04 - Entities and Attributes
+# Analysis and design - Entities and attributes
 
-## Viewing the current diagram
+The corresponding chapter in this book developed the entities and their attributes for the database of The Sci-fi Collective. You can find the developed entities and their attributes, as well as how to load them using different diagramming tools in this folder.
 
-Open file ch4-er-diagram.png. The file demonstrates the final state of entities as described in Chapter 4. You can use an image viewer (e.g., Windows Photos) to view the entities.
+- [View or edit the E-R diagram via dbdiagram.io](#view-or-edit-the-e-r-diagram-via-dbdiagram.io)
+- [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
+    - [Windows](#windows)
+    - [Linux](#linux)
+    - [Mac](#mac)
 
-## Working with the ER diagram
+The final state of entities as described in Chapter 4 is as follows:
 
-### Using dbdiagram.io
+<img src="./ch4-er-diagram.png" alt="e-r-diagram" style="width:'70%';">
 
-#### Windows, Linux, and Mac
+## View or edit the E-R diagram via dbdiagram.io
 
-- Visit the [dbdiagram.io](https://dbdiagram.io/home) website.
-- Click on the "Import Database" button on the left side of the page.
-- Click on the "Upload a file" button.
-- Select the file ch4-er-diagram-mysql-mariadb.sql and click "Open".
-- Click on the "Import" button.
-- You can now view the current ER diagram. Changes can be made to the left. You can use "Export" to generate a new SQL file.
+[dbdiagram.io](https://dbdiagram.io) is a free online service that allows you to create and edit E-R diagrams. You can also generate SQL CREATE TABLE statements given a diagram using dbdiagram.io. The current file contains all entities as described in their final state in Chapter 4. To view or edit the E-R diagram via diagram.io, you can use the following steps:
 
-Note: dbdiagram.io is a free online service that allows you to create and edit ER diagrams. You can also generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4. You can use this website to edit the entities as necessary. Use the reference manual for further help in editing the ER diagram online: [dbdiagram.io Reference Manual](https://dbdiagram.io/docs/).
+1. Visit the [dbdiagram.io](https://dbdiagram.io/home) website, and log into your account.
+2. Click on the "Import Database" button on the left side of the page.
+3. Click on the "Upload a file" button.
+4. Select the file `ch4-er-diagram-mysql-mariadb.sql` and click "Open".
+5. Click on the "Import" button.
+6. You can now view the current E-R diagram. Changes can be made to the left. You can use "Export" to generate a new SQL file.
 
-### Using MySQL Workbench
+You can refer to [the manual of diagram.io](https://dbdiagram.io/docs/) if you have any questions about diagram.io.
 
-#### Windows
+## View or edit the E-R diagram via MySQL Workbench
 
-- Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
-- Download the mysql-workbench-community-8.0.33-winx64.msi file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
-- Follow the installation instructions from the installer.
-- Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-- The file (ch4-er-diagram.mwb) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
-- Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
+MySQL Workbench is an administration tool for MySQL as much as an E-R diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
 
-Note: MySQL Workbench is an administration tool for MySQL as much as an ER diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
+### Windows
 
-Refer to [README.md](../chapter_01/README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
+1. Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
+2. Download the `mysql-workbench-community-8.0.33-winx64.msi` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
+3. Follow the installation instructions from the installer.
+4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
+5. The file (`ch4-er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
-#### Linux
+### Linux
 
-- Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
-- Download the mysql-workbench-community-8.0.33-1.el8.x86_64.rpm file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
-- Follow the installation instructions from the installer.
-- Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-- The file (ch4-er-diagram.mwb) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
-- Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
+1. Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
+2. Download the `mysql-workbench-community-8.0.33-1.el8.x86_64.rpm` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
+3. Follow the installation instructions from the installer.
+4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
+5. The file (`ch4-er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
-Note: MySQL Workbench is an administration tool for MySQL as much as an ER diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
+### Mac
 
-Refer to [README.md](../chapter_01/README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
-
-#### Mac
-
-- Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
-- Download the mysql-workbench-community-8.0.33-macos-x86_64.dmg file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
-- Follow the installation instructions from the installer.
-- Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-- The file (ch4-er-diagram.mwb) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
-- Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
-
-Note: MySQL Workbench is an administration tool for MySQL as much as an ER diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
-
-Refer to [README.md](../chapter_01/README.md) from Chapter 01 for instructions about importing a sql file in your respective database system (e.g., MySQL).
-
-## Other versions
-Versions for PostgreSQL, SQL Server, and sqllite are also provided for convenience. Look for the .sql file with appropriate database designation.
+1. Visit the [MySQL Workbench Download Page](https://dev.mysql.com/downloads/workbench/).
+2. Download the `mysql-workbench-community-8.0.33-macos-x86_64.dmg` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters).
+3. Follow the installation instructions from the installer.
+4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
+5. The file (`ch4-er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
