@@ -1,8 +1,8 @@
-# Analysis and design - Relationships
+# Relationships
 
 The corresponding chapter in this book developed the relationships among the entities for the database of The Sci-fi Collective. You can find the entities and their relationships, as well as how to load them using different diagramming tools in this folder.
 
-- [View or edit the E-R diagram via dbdiagram.io](#view-or-edit-the-e-r-diagram-via-dbdiagram.io)
+- [View or edit the E-R diagram via dbdiagram](#view-or-edit-the-e-r-diagram-via-dbdiagram)
 - [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
     - [Windows](#windows)
     - [Linux](#linux)
@@ -12,7 +12,7 @@ The final state of entities as described in Chapter 5 is as follows:
 
 <img src="./ch5-er-diagram.png" alt="e-r-diagram" style="width:'70%';">
 
-## View or edit the E-R diagram via dbdiagram.io
+## View or edit the E-R diagram via dbdiagram
 
 [dbdiagram.io](https://dbdiagram.io) is a free online service that allows you to create and edit E-R diagrams. You can also generate SQL CREATE TABLE statements given a diagram using dbdiagram.io. The current file contains all entities as described in their final state in Chapter 5. To view or edit the E-R diagram via diagram.io, you can use the following steps:
 
