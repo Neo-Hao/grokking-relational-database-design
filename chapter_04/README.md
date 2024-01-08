@@ -1,4 +1,4 @@
-# Analysis and design - Entities and attributes
+# Entities and attributes
 
 The corresponding chapter in this book developed the entities and their attributes for the database of The Sci-fi Collective. You can find the developed entities and their attributes, as well as how to load them using different diagramming tools in this folder.
 
