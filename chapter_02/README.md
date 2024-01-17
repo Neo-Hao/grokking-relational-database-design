@@ -10,8 +10,12 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Install and start MySQL](#install-and-start-mysql)
     - [Load the prepared MySQL script](#load-the-prepared-mysql-script)
 - [PostgreSQL database](#postgresql-database)
-    - [Install and start PostgreSQL on Mac](#install-and-start-postgresql)
+    - [Install and start PostgreSQL](#install-and-start-postgresql)
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
+- [SQL Server database](#slq-server-database)
+    - [Install and start SQL Server](#install-and-start-sql-server)
+- [Oracle database](#oracle-database)
+    - [Install and start Oracle](#install-and-start-oracle-database-on-mac)
 
 ## SQLite online
 
@@ -135,3 +139,19 @@ CREATE DATABASE onlinestore;
 ```
 
 In the same console environment, you can run any SQL queries you want, including the examples covered by Chapter 2. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.
+
+## SQL Server database
+
+SQL Server is a popular RDBMS developed by Microsoft. If you don't have SQL Server installed on your computer, you will need to install it first.
+
+### Install and start SQL Server
+
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#slq-server-database) in the `chapter_01` folder to install SQL Server first.
+
+## Oracle database
+
+Oracle is a popular RDBMS developed by Oracle Corporation. If you don't have Oracle installed on your computer, you will need to install it first.
+
+### Install and start Oracle database
+
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#oracle-database) in the `chapter_01` folder to install Oracle first.

@@ -18,6 +18,14 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Install and start PostgreSQL on Windows](#install-and-start-postgresql-on-windows)
     - [Install and start PostgreSQL on Linux](#install-and-start-postgresql-on-linux)
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
+- [SQL Server database](#slq-server-database)
+    - [Install and start SQL server on Mac](#install-and-start-sql-server-on-mac)
+    - [Install and start SQL server on Windows](#install-and-start-sql-server-on-windows)
+    - [Install and start SQL server on Linux](#install-and-start-sql-server-on-linux)
+- [Oracle database](#oracle-database)
+    - [Install and start Oracle database on Mac or Linux](#install-and-start-oracle-database-on-mac-or-linux)
+    - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows)
+
 
 ## SQLite online
 
@@ -370,3 +378,42 @@ INSERT 0 10
 ```
 
 In the same console environment, you can run any SQL queries you want, including the examples covered by Chapter 1. You can always quit the PostgreSQL console by typing `\q` and pressing `Enter`.
+
+## SQL server
+
+### Install and start SQL server on Mac
+
+Microsoft doesn’t support running an SQL server database directly on a Mac computer. You are recommended to run a Linux/Windows virtual machine first, and then install Oracle database on the virtual machine. [You can also use a Docker to achieve this goal](https://database.guide/how-to-install-sql-server-on-a-mac/).
+
+### Install and start SQL server on Windows
+
+You will need either the *Express edition* or the *Developer edition* for this purpose. Both versions are free, but the Express edition is limited in features. The Developer edition is also free but for development and testing purposes only, not for production.
+
+You can follow the steps below to install SQL server on Windows:
+
+1. Go to https://www.microsoft.com/en-us/sql-server/sql-server-downloads to download the installer for the edition you want.
+2. Run the installer. You will be presented with a few options like "Basic", "Custom", and "Download Media". The "Basic" option should be fine for most cases, which will install the default configuration of SQL Server. 
+3. After installation, you may need to install SQL Server Management Studio (SSMS) depending on if you want a graphical dashboard to manage SQL server. A link to download SSMS is usually provided at the end of the SQL Server installation process, or you can download it from https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16.
+4. After installation, you may need to configure SQL Server, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through SQL Server Management Studio. When everything is wrapped up, you may need to restart your computer.
+
+### Install and start SQL server on Linux
+
+You are recommended to follow the steps listed on [the SQL server official website](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver16) to install SQL server on a Linux machine.
+
+## Oracle database
+
+### Install and start Oracle database on Mac or Linux
+
+Oracle doesn’t support running an Oracle database directly on a Mac computer. [You are recommended to run a Linux/Windows virtual machine first, and then install Oracle database on the virtual machine](https://database.guide/how-to-install-oracle-on-a-mac/).
+
+Installing Oracle on a Linux machine is complicated and doesn't serve the educational purposes. If you need to do so, you can follow the steps listed on [the Oracle database official website](https://docs.oracle.com/en/java/java-components/advanced-management-console/2.21/install-guide/oracle-database-installation-and-configuration-advanced-management-console.html#GUID-DF2557D8-C727-4243-8387-6154E5C1C36A) to install Oracle database on a Linux machine. Please note that you need to use a supported Linux distribution like Oracle Linux, Red Hat Enterprise Linux, CentOS, or SUSE Linux Enterprise Server, and will need to create an Oracle account to download the installer. 
+
+### Install and start Oracle database on Windows
+
+You can download the Oracle database installer from [Oracle website](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html). You will need to create an Oracle account to download the installer.
+
+After downloading the installer, you can follow the instructions to install Oracle database on your Windows machine:
+
+1. Run the installer. You will be presented with a few options like "Basic" or "Custom". The "Basic" option should be fine for most cases, which will install the default configuration of Oracle database.
+2. After installation, you may need to install Oracle SQL Developer depending on if you want a graphical dashboard to manage Oracle database. A link to download Oracle SQL Developer is usually provided at the end of the Oracle database installation process, or you can download it from https://www.oracle.com/tools/downloads/sqldev-downloads.html.
+3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer.
