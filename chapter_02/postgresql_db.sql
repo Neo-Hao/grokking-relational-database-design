@@ -106,7 +106,7 @@ CREATE TABLE review (
     review_id BIGINT NOT NULL,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
-    datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    datetime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (review_id),
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
