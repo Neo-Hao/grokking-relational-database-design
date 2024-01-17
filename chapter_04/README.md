@@ -13,7 +13,7 @@ The corresponding chapter in this book developed the entities and their attribut
 
 The final state of entities as described in Chapter 4 is as follows:
 
-<img src="./er-diagram.png" alt="e-r-diagram" style="width:'70%';">
+<img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'70%';">
 
 ## View or edit the E-R diagram via dbdiagram
 
