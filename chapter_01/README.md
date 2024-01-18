@@ -400,6 +400,24 @@ You can follow the steps below to install SQL server on Windows:
 
 You are recommended to follow the steps listed on [the SQL server official website](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver16) to install SQL server on a Linux machine.
 
+### Load the prepared SQL server script
+
+1. Open Microsoft SQL Server Management Studio (SSMS) and connect to the server. If you are using the Express edition, the server name should be `localhost\SQLEXPRESS`. If you are using the Developer edition, the server name should be `localhost`. You can use Windows Authentication to connect to the server.
+2. Navigate to File -> Open -> File, and load the script [`sql_server_db.sql`](./sql_server_db.sql).
+3. Click the Execute button to execute the script. You should see the following output in the Messages tab:
+
+```
+(1 row affected)
+(1 row affected)
+(10 rows affected)
+```
+4. You can verify that the product has been imported by running the following commands in a new query window (Ctrl + N):
+
+```
+USE onlinestore;
+SELECT * FROM product;
+```
+
 ## Oracle database
 
 ### Install and start Oracle database on Mac or Linux
@@ -410,10 +428,10 @@ Installing Oracle on a Linux machine is complicated and doesn't serve the educat
 
 ### Install and start Oracle database on Windows
 
-You can download the Oracle database installer from [Oracle website](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html). You will need to create an Oracle account to download the installer.
+You can download the Oracle database installer from [Oracle website](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html). Scroll down and download the free version of Oracle, e.g., Oracle Database 21c XE (Express Edition). If it is a zip, remember to unzip the file once downloaded.
 
-After downloading the installer, you can follow the instructions to install Oracle database on your Windows machine:
+Follow the instructions to install Oracle database on your Windows machine:
 
-1. Run the installer. You will be presented with a few options like "Basic" or "Custom". The "Basic" option should be fine for most cases, which will install the default configuration of Oracle database.
+1. Run the installer (setup.msi). Setup a root password for the database and make a note of it. Then proceed with the installation instructions.
 2. After installation, you may need to install Oracle SQL Developer depending on if you want a graphical dashboard to manage Oracle database. A link to download Oracle SQL Developer is usually provided at the end of the Oracle database installation process, or you can download it from https://www.oracle.com/tools/downloads/sqldev-downloads.html.
 3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer.
