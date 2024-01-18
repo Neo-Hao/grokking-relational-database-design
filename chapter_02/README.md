@@ -44,7 +44,7 @@ In case you jump to this chapter directly, you need to refer to [the README file
 The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). You can load the prepared script by:
 
 1. Open the terminal, navigate into the `chapter_02` folder of this repository
-2. Run the following command, and you will be in the SQLite console environment:
+2. **** Run the following command, and you will be in the SQLite console environment:
 
 ```
 sqlite3 onlinestore.db
@@ -123,7 +123,7 @@ psql -U postgres
 3. In the console environment, create a database named `onlinestore` by running the following command:
 
 ```
-CREATE DATABASE onlinestore;
+CREATE DATABASE onlinestore IF NOT EXISTS;
 ```
 
 4. In the console environment, use the database `onlinestore` by running the following command:
@@ -147,6 +147,10 @@ SQL Server is a popular RDBMS developed by Microsoft. If you don't have SQL Serv
 ### Install and start SQL Server
 
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#slq-server-database) in the `chapter_01` folder to install SQL Server first.
+
+### Load the prepared SQL Server script
+
+The script prepared for SQL Server database is [`sql_server_db.sql`](./sql_server_db.sql). You can refer to [the same instructions for Chapter 1](../chapter_01/README.md#load-the-prepared-sql-server-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
 
 ## Oracle database
 

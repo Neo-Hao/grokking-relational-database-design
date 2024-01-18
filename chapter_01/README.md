@@ -22,6 +22,7 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Install and start SQL server on Mac](#install-and-start-sql-server-on-mac)
     - [Install and start SQL server on Windows](#install-and-start-sql-server-on-windows)
     - [Install and start SQL server on Linux](#install-and-start-sql-server-on-linux)
+    - [Load the prepared SQL server script](#load-the-prepared-sql-server-script)
 - [Oracle database](#oracle-database)
     - [Install and start Oracle database on Mac or Linux](#install-and-start-oracle-database-on-mac-or-linux)
     - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows)
@@ -80,7 +81,7 @@ If you are using a Linux, you can download the ZIP file for Linux from [SQLite w
 The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). You can load the prepared script by:
 
 1. Open the terminal, navigate into the `chapter_01` folder of this repository
-2. Run the following command, and you will be in the SQLite console environment:
+2. Run the following command to create a new database named `onlinestore.db`, and you will be in the SQLite console environment:
 
 ```
 sqlite3 onlinestore.db
@@ -214,11 +215,7 @@ USE onlinestore;
 SELECT * FROM product;
 ```
 
-6. You should see records on a table.
-
-### Using the prepared MySQL script
-
-Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the MySQL console environment. You can do this by running the following command:
+6. You should see records on a table. Now you have loaded the script. To query the database and table created by the script, you will need to navigate to the MySQL console environment. You can do this by running the following command:
 
 ```
 mysql -u root
@@ -326,7 +323,7 @@ psql -U postgres
 2. Hit enter to use the default option and provide the password when asked for the default user. This is a correct interaction that leads to successful prompt:
 
 ```
-Server [localhost]:
+Server [localhost]: 
 Database [postgres]:
 Port [5432]:
 Username [postgres]:
@@ -339,8 +336,6 @@ Type "help" for help.
 
 postgres=#
 ```
-
-### Create the database
 
 3. In the console environment, create a database named `onlinestore` by running the following command:
 
@@ -398,9 +393,33 @@ You can follow the steps below to install SQL server on Windows:
 
 ### Install and start SQL server on Linux
 
-You are recommended to follow the steps listed on [the SQL server official website](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver16) to install SQL server on a Linux machine.
+You are recommended to [follow these steps] (https://blog.devart.com/how-to-install-sql-server-on-linux-ubuntu.html) to install SQL server on a Linux machine. If you want a graphical interface to manage your SQL server, then dbForge Studio is a good option. The above link also provides instructions on how to install dbForge Studio on a Linux machine.
 
 ### Load the prepared SQL server script
+
+#### Linux
+
+You can follow the following steps to load the prepared script:
+
+1. Open the terminal, and navigate into the `chapter_01` folder of this repository
+2. You need to connect to your SQL Server instance via your terminal. If you haven't set up any users yet, you'll likely need to connect with the default sa (system administrator) user. Run the following command in your terminal. You will be prompted to enter the password for the sa user -- if you follow the above link to install and configure your SQL server, you have already set up the password for the sa user. Please use that password.
+```
+sqlcmd -S localhost -U SA
+```
+
+3. Once connected to the SQL Server, you can execute your script file (`sql_server_db.sql`) you can run it using the following command:
+```
+:r ./sql_server_db.sql
+```
+
+4. After the script has executed, you can verify that the database and tables were created successfully. Use SQL commands to check:
+
+```
+USE onlinestore;
+SELECT * FROM product;
+```
+
+#### Windows
 
 1. Open Microsoft SQL Server Management Studio (SSMS) and connect to the server. If you are using the Express edition, the server name should be `localhost\SQLEXPRESS`. If you are using the Developer edition, the server name should be `localhost`. You can use Windows Authentication to connect to the server.
 2. Navigate to File -> Open -> File, and load the script [`sql_server_db.sql`](./sql_server_db.sql).
@@ -422,9 +441,9 @@ SELECT * FROM product;
 
 ### Install and start Oracle database on Mac or Linux
 
-Oracle doesn’t support running an Oracle database directly on a Mac computer. [You are recommended to run a Linux/Windows virtual machine first, and then install Oracle database on the virtual machine](https://database.guide/how-to-install-oracle-on-a-mac/).
+Oracle doesn’t support running an Oracle database directly on a Mac computer. [You are recommended to run a virtual machine first, and then install Oracle database on the virtual machine](https://database.guide/how-to-install-oracle-on-a-mac/).
 
-Installing Oracle on a Linux machine is complicated and doesn't serve the educational purposes. If you need to do so, you can follow the steps listed on [the Oracle database official website](https://docs.oracle.com/en/java/java-components/advanced-management-console/2.21/install-guide/oracle-database-installation-and-configuration-advanced-management-console.html#GUID-DF2557D8-C727-4243-8387-6154E5C1C36A) to install Oracle database on a Linux machine. Please note that you need to use a supported Linux distribution like Oracle Linux, Red Hat Enterprise Linux, CentOS, or SUSE Linux Enterprise Server, and will need to create an Oracle account to download the installer. 
+Installing Oracle on a Linux machine is complicated and doesn't serve the learning purposes. If you need to do so, you can follow the steps listed on [the Oracle database official website](https://docs.oracle.com/en/java/java-components/advanced-management-console/2.21/install-guide/oracle-database-installation-and-configuration-advanced-management-console.html#GUID-DF2557D8-C727-4243-8387-6154E5C1C36A) to install Oracle database on a Linux machine. Please note that you need to use a supported Linux distribution like Oracle Linux, Red Hat Enterprise Linux, CentOS, or SUSE Linux Enterprise Server, and will need to create an Oracle account to download the installer. 
 
 ### Install and start Oracle database on Windows
 

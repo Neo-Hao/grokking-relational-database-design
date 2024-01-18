@@ -14,29 +14,29 @@ IF NOT EXISTS (
     WHERE
         name = N'onlinestore'
 ) CREATE DATABASE onlinestore;
-
 GO
-    -- Use the database
-    USE onlinestore;
 
+-- Use the database
+USE onlinestore;
 GO
-    -- Drop the table if it exists
-    IF OBJECT_ID('product', 'U') IS NOT NULL DROP TABLE product;
 
+-- Drop the table if it exists
+IF OBJECT_ID('product', 'U') IS NOT NULL DROP TABLE product;
 GO
-    -- Create the product table
-    CREATE TABLE product (
-        product_id INT NOT NULL,
-        name NVARCHAR(MAX) NOT NULL,
-        -- TEXT type in MySQL is similar to NVARCHAR(MAX) in SQL Server
-        description NVARCHAR(MAX) NOT NULL,
-        price DECIMAL(5, 2) NOT NULL,
-        manufacturer NVARCHAR(MAX) NOT NULL,
-        PRIMARY KEY (product_id)
-    );
 
+-- Create the product table
+CREATE TABLE product (
+    product_id INT NOT NULL,
+    name NVARCHAR(MAX) NOT NULL,
+    -- TEXT type in MySQL is similar to NVARCHAR(MAX) in SQL Server
+    description NVARCHAR(MAX) NOT NULL,
+    price DECIMAL(5, 2) NOT NULL,
+    manufacturer NVARCHAR(MAX) NOT NULL,
+    PRIMARY KEY (product_id)
+);
 GO
-    -- Insert data into the product table
+
+-- Insert data into the product table
 INSERT INTO
     product (
         product_id,
@@ -116,25 +116,25 @@ VALUES
         33.55,
         N'Silly Supplies Co.'
     );
-
 GO
-    -- Drop the review table if it exists
-    IF OBJECT_ID('review', 'U') IS NOT NULL DROP TABLE review;
 
+-- Drop the review table if it exists
+IF OBJECT_ID('review', 'U') IS NOT NULL DROP TABLE review;
 GO
-    -- Create the review table
-    CREATE TABLE review (
-        review_id BIGINT NOT NULL,
-        product_id INT NOT NULL,
-        review_text NVARCHAR(MAX) NOT NULL,
-        datetime DATETIME NOT NULL DEFAULT GETDATE(),
-        -- GETDATE() in SQL Server is equivalent to CURRENT_TIMESTAMP in MySQL
-        PRIMARY KEY (review_id),
-        CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
-    );
 
+-- Create the review table
+CREATE TABLE review (
+    review_id BIGINT NOT NULL,
+    product_id INT NOT NULL,
+    review_text NVARCHAR(MAX) NOT NULL,
+    datetime DATETIME NOT NULL DEFAULT GETDATE(),
+    -- GETDATE() in SQL Server is equivalent to CURRENT_TIMESTAMP in MySQL
+    PRIMARY KEY (review_id),
+    CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
+);
 GO
-    -- Insert data into the review table
+
+-- Insert data into the review table
 INSERT INTO
     review (review_id, product_id, review_text, datetime)
 VALUES
@@ -210,5 +210,4 @@ VALUES
         N'I would definitely buy this again, great value for the price',
         '2022-01-12 23:00:00'
     );
-
 GO
