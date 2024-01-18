@@ -14,6 +14,7 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
 - [SQL Server database](#slq-server-database)
     - [Install and start SQL Server](#install-and-start-sql-server)
+    - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
 - [Oracle database](#oracle-database)
     - [Install and start Oracle](#install-and-start-oracle-database-on-mac)
 
