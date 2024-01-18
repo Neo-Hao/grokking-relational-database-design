@@ -65,5 +65,8 @@ We have provided scripts for different RDBMS that correspond to the final state 
 
 - [MySQL](./mysql_db.sql)
 - [PostgreSQL](./postgresql_db.sql)
-- [SQL Server](./sqlserver_db.sql)
 - [SQLite](./sqlite_db.sql)
+- [SQL Server](./sqlserver_db.sql)
+- [Oracle](./oracle_db.sql)
+
+You can refer to [the README files in the folder of Chapter 1](../chapter_01/README.md) for instructions on how to load these scripts into the corresponding RDBMS.
