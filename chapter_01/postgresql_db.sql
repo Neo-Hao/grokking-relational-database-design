@@ -6,8 +6,11 @@
  Note 1:          This script is for PostgreSQL 14 or above.
  Note 2:          This script assumes that a database is created and used.
  *************************************************************************************/
-DROP TABLE IF EXISTS product;
 
+-- Assuming a database 'onlinestore' is already created and used
+
+-- Create the product table and insert some data
+DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
     name TEXT NOT NULL,

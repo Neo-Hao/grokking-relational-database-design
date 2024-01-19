@@ -7,7 +7,7 @@
  Note:          This script is for the tool named SQLite Online.
 *************************************************************************************/
 
-
+-- Create the product table and insert some data
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT NOT NULL,
@@ -98,6 +98,7 @@ VALUES
         'Silly Supplies Co.'
     );
 
+-- Create the review table and insert some data
 DROP TABLE IF EXISTS review;
 CREATE TABLE review (
     review_id BIGINT NOT NULL,

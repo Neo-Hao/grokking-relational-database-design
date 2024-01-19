@@ -6,6 +6,7 @@
                     corresponding to what's covered in Chapter 4.
  Note:           This script is for SQL Server 2019 or above.
  *************************************************************************************/
+
 -- Create database scificollective_chapter4
 CREATE DATABASE IF NOT EXISTS scificollective_chapter4;
 

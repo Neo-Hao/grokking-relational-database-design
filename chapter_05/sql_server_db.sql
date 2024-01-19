@@ -7,7 +7,7 @@
  Note:           This script is for SQL Server 2019 or above.
  *************************************************************************************/
 
--- Check if the database exists and drop it
+-- Check if the database scificollective_chapter5 exists and drop it
 IF EXISTS (SELECT * FROM sys.databases WHERE name = 'scificollective_chapter5')
 DROP DATABASE scificollective_chapter5;
 

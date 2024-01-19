@@ -7,7 +7,7 @@
  Note 2:          This script assumes that a database is created and used.
  *************************************************************************************/
 
--- Assuming a user 'onlinestore' already exists and you have the necessary privileges
+-- Assuming a schema 'onlinestore' is already created and used
 
 -- Drop the product table if it exists
 BEGIN

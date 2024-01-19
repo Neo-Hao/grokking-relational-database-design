@@ -9,7 +9,7 @@
  Note 2:          This script assumes that a database is created and used.
  *************************************************************************************/
 
--- Assuming the 'onlinestore' schema is already in use and the user has necessary privileges.
+-- Assuming the schema onlinestore_chapter2 is created and used
 
 -- Creating the 'product' table
 DROP TABLE IF EXISTS product;

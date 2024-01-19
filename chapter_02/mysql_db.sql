@@ -8,10 +8,13 @@
  Note:          This script is for MySQL 8.0 or above.
 *************************************************************************************/
 
+-- Create the onlinestore_chapter2 database if it doesn't exist
 CREATE DATABASE IF NOT EXISTS onlinestore_chapter2;
 
+-- Use the onlinestore_chapter2 database
 USE onlinestore_chapter2;
 
+-- Create the product table and insert some data
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
@@ -101,6 +104,7 @@ VALUES
         'Silly Supplies Co.'
     );
 
+-- Create the review table and insert some data
 DROP TABLE IF EXISTS review;
 CREATE TABLE review (
     review_id BIGINT PRIMARY KEY,

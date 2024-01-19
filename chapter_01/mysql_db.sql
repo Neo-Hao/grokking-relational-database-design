@@ -6,12 +6,14 @@
  Note:          This script is for MySQL 8.0 or above.
 *************************************************************************************/
 
+-- Create the onlinestore database if it doesn't exist.
 CREATE DATABASE IF NOT EXISTS onlinestore;
 
+-- Use the onlinestore database.
 USE onlinestore;
 
+-- Create the product table and insert some data.
 DROP TABLE IF EXISTS product;
-
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
     name TEXT NOT NULL,

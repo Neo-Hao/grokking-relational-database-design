@@ -8,7 +8,7 @@
  Note 2:         This script assumes that a database is created and used.
 *************************************************************************************/
 
--- assuming the database scificollective_chapter5 is already created and being used
+-- Assuming the database scificollective_chapter5 is already created and being used
 
 -- Table payment_method
 CREATE TABLE payment_method (

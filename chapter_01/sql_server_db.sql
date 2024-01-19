@@ -5,6 +5,7 @@
  Description:    Create a product table and insert some data for the onlinestore database.
  Note:           This script is for SQL Server 2019 or above.
  *************************************************************************************/
+
 -- Check if the database exists and create if it does not
 CREATE DATABASE IF NOT EXISTS onlinestore;
 

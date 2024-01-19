@@ -8,7 +8,10 @@
  Note 1:         This script is for PostgreSQL 14 or above.
  Note 2:         This script assumes that a database is created and used.
 *************************************************************************************/
- 
+
+-- Assuming a database 'onlinestore_chapter2' is already created and used
+
+-- Create the product table and insert some data
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT NOT NULL,
@@ -99,6 +102,7 @@ VALUES
         'Silly Supplies Co.'
     );
 
+-- Create the review table and insert some data
 DROP TABLE IF EXISTS review;
 CREATE TABLE review (
     review_id BIGINT NOT NULL,
