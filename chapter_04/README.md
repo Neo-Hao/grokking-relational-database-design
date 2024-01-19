@@ -56,6 +56,17 @@ MySQL Workbench is an administration tool for MySQL as much as an E-R diagrammin
 5. The file (`er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
+## View or edit the E-R diagram via Lucidchart
+
+If you choose to use Lucidchart, we have designed a template that can be found on Lucidchart. After creating an account do the following:
+1. Navigate to [Lucid](https://lucid.app/)
+2. Click New -> Lucidchart -> Create from Template
+3. In the search box ("Search all templates"), type "grokking relational"
+4. Select the template that corresponds to Chapter 4.
+
+You can also view the template without having an account by following this link: 
+[Lucidchart Chapter 4 Diagram](https://lucid.app/documents/view/976e817c-4c62-47ee-8e62-443635e46855)
+
 ## Scripts for different RDBMS 
 
 We have provided scripts for different RDBMS that correspond to the final state of the entities as described in Chapter 4. You can find these scripts as follows:
