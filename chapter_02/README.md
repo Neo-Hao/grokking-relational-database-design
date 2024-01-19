@@ -94,7 +94,7 @@ In case you jump to this chapter directly, you need to refer to [the README file
 
 ### Load the prepared PostgreSQL script
 
-Before loading the script, you will need to create a database named `onlinestore` and use this database via the PostgreSQL console environment first. Different from SQLite and MySQL, there are no easy approach to merge these two steps into the script. 
+Before loading the script, you will need to create a database named `onlinestore_chapter2` and use this database via the PostgreSQL console environment first. Different from SQLite and MySQL, there are no easy approach to merge these two steps into the script. 
 
 You can follow the following steps to load the prepared script:
 
@@ -105,16 +105,16 @@ You can follow the following steps to load the prepared script:
 ```
 psql -U postgres
 ```
-3. In the console environment, create a database named `onlinestore` by running the following command:
+3. In the console environment, create a database named `onlinestore_chapter2` by running the following command:
 
 ```
 CREATE DATABASE onlinestore_chapter2;
 ```
 
-4. In the console environment, use the database `onlinestore` by running the following command:
+4. In the console environment, use the database `onlinestore_chapter2` by running the following command:
 
 ```
-\c onlinestore
+\c onlinestore_chapter2
 ```
 
 5. Now you are ready to load the prepared script. The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresql_db.sql). In the console environment, run the following command:
