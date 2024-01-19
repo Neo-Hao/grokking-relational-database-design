@@ -58,7 +58,7 @@ MySQL Workbench is an administration tool for MySQL as much as an E-R diagrammin
 
 ## Scripts for different RDBMS 
 
-We have provided scripts for different RDBMS that correspond to the final state of the entities as described in Chapter 4. You can find these scripts as follows:
+We have provided scripts for different RDBMS that correspond to the final state of the entities and relationships in Chapter 5. You can find these scripts as follows:
 
 - [MySQL](./mysql_db.sql)
 - [PostgreSQL](./postgresql_db.sql)
