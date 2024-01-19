@@ -9,7 +9,6 @@
 
 
 DROP TABLE IF EXISTS product;
-
 CREATE TABLE product (
     product_id INT NOT NULL,
     name TEXT NOT NULL,
@@ -100,7 +99,6 @@ VALUES
     );
 
 DROP TABLE IF EXISTS review;
-
 CREATE TABLE review (
     review_id BIGINT NOT NULL,
     product_id INT NOT NULL,

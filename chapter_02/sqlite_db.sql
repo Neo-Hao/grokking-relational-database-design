@@ -4,18 +4,17 @@
  Author:        Qiang Hao
  Description:   Create a pair of two related tables, product and review, 
                 and insert some data into the two tables that support the 
-                onlinestore database.
+                onlinestore_chapter2 database.
  Note:          This script is for SQLite.
 *************************************************************************************/
 
 
 -- Connect to a new or existing database file
 -- Connect to the database
-ATTACH DATABASE 'onlinestore.db' AS onlinestore;
+ATTACH DATABASE 'onlinestore_chapter2.db' AS onlinestore2;
 
-DROP TABLE IF EXISTS onlinestore.product;
-
-CREATE TABLE onlinestore.product (
+DROP TABLE IF EXISTS onlinestore2.product;
+CREATE TABLE onlinestore2.product (
     product_id INT NOT NULL,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
@@ -25,7 +24,7 @@ CREATE TABLE onlinestore.product (
 );
 
 INSERT INTO
-    onlinestore.product (
+    onlinestore2.product (
         product_id,
         name,
         description,
@@ -104,9 +103,8 @@ VALUES
         'Silly Supplies Co.'
     );
 
-DROP TABLE IF EXISTS onlinestore.review;
-
-CREATE TABLE onlinestore.review (
+DROP TABLE IF EXISTS onlinestore2.review;
+CREATE TABLE onlinestore2.review (
     review_id BIGINT NOT NULL,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
@@ -116,7 +114,7 @@ CREATE TABLE onlinestore.review (
 );
 
 INSERT INTO
-    onlinestore.review (
+    onlinestore2.review (
         review_id,
         product_id,
         review_text,

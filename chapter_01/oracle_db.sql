@@ -22,13 +22,12 @@ END;
 
 / -- Create table product
 CREATE TABLE product (
-    product_id NUMBER NOT NULL,
+    product_id NUMBER PRIMARY KEY,
     name VARCHAR2(4000) NOT NULL,
     -- Oracle does not support TEXT, using VARCHAR2 instead
     description VARCHAR2(4000) NOT NULL,
     price NUMBER(5, 2) NOT NULL,
-    manufacturer VARCHAR2(4000) NOT NULL,
-    CONSTRAINT pk_product PRIMARY KEY (product_id)
+    manufacturer VARCHAR2(4000) NOT NULL
 );
 
 / -- Insert data into product

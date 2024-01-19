@@ -2,15 +2,17 @@
  RDBMS:          PostgreSQL
  Create Date:    01/17/2023
  Author:         Qiang Hao
- Description:    Create all the tables for the scifi_collective database
+ Description:    Create all the tables for the scificollective_chapter4 database
                  corresponding to what's covered in Chapter 4.
  Note 1:         This script is for PostgreSQL 14 or above.
  Note 2:         This script assumes that a database is created and used.
 *************************************************************************************/
- 
+
+-- Assuming the database scificollective_chapter4 is already created and being used
 
 -- Table payment_method
-CREATE TABLE IF NOT EXISTS payment_method (
+DROP TABLE IF EXISTS payment_method;
+CREATE TABLE payment_method (
   payment_id SERIAL PRIMARY KEY,
   name VARCHAR(30),
   card_number CHAR(16),
@@ -19,9 +21,9 @@ CREATE TABLE IF NOT EXISTS payment_method (
   billing_address VARCHAR(255)
 );
 
-
 -- Table product
-CREATE TABLE IF NOT EXISTS product (
+DROP TABLE IF EXISTS product;
+CREATE TABLE product (
   code CHAR(12) PRIMARY KEY,
   name VARCHAR(100),
   description TEXT,
@@ -32,9 +34,9 @@ CREATE TABLE IF NOT EXISTS product (
   inventory_quantity INT
 );
 
-
 -- Table purchase
-CREATE TABLE IF NOT EXISTS purchase (
+DROP TABLE IF EXISTS purchase;
+CREATE TABLE purchase (
   purchase_id SERIAL PRIMARY KEY,
   total_price NUMERIC(13,2),
   purchase_time TIMESTAMP,
@@ -42,18 +44,17 @@ CREATE TABLE IF NOT EXISTS purchase (
   product_quantity INT
 );
 
-
-
 -- Table review
-CREATE TABLE IF NOT EXISTS review (
+DROP TABLE IF EXISTS review;
+CREATE TABLE review (
   review_id SERIAL PRIMARY KEY,
   review_text TEXT,
   review_time TIMESTAMP
 );
 
-
 -- Table user
-CREATE TABLE IF NOT EXISTS user (
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
   email VARCHAR(320) PRIMARY KEY,
   username VARCHAR(30),
   password VARCHAR(20),

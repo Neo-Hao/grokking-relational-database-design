@@ -163,7 +163,7 @@ service mysql stop
 
 ### Load the prepared MySQL script
 
-The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by:
+The script prepared for MySQL database is [`mysql_db.sql`](./mysql_db.sql). You can load the prepared script by following the steps below.
 
 #### Linux and Mac
 
@@ -316,6 +316,32 @@ You can follow the following steps to load the prepared script:
 psql -U postgres
 ```
 
+
+1. Open the terminal, and navigate into the `chapter_02` folder of this repository
+
+2. Log in to the PostgreSQL console environment by running the following command:
+
+```
+psql -U postgres
+```
+3. In the console environment, create a database named `onlinestore` by running the following command:
+
+```
+CREATE DATABASE onlinestore;
+```
+
+4. In the console environment, use the database `onlinestore` by running the following command:
+
+```
+\c onlinestore
+```
+
+5. Now you are ready to load the prepared script. The script prepared for PostgreSQL database is [`postgresql_db.sql`](./postgresql_db.sql). In the console environment, run the following command:
+
+```
+\i postgresql_db.sql
+```
+
 #### Windows
 
 1. Open the "SQL Shell (psql)" from the Start Menu.
@@ -396,6 +422,8 @@ You can follow the steps below to install SQL server on Windows:
 You are recommended to [follow these steps] (https://blog.devart.com/how-to-install-sql-server-on-linux-ubuntu.html) to install SQL server on a Linux machine. If you want a graphical interface to manage your SQL server, then dbForge Studio is a good option. The above link also provides instructions on how to install dbForge Studio on a Linux machine.
 
 ### Load the prepared SQL server script
+
+The script prepared for MySQL database is [`sql_server_db.sql`](./sql_server_db.sql). You can load the prepared script by following the steps below.
 
 #### Linux
 

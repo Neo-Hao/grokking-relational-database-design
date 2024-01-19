@@ -4,16 +4,12 @@ The scripts that you can use to create databases/tables for this chapter are all
 
 - [SQLite online](#sqlite-online)
 - [SQLite database](#sqlite-database)
-    - [Install SQLite](#install-sqlite)
     - [Load the prepared SQLite script](#load-the-prepared-sqlite-script)
 - [MySQL database](#mysql-database)
-    - [Install and start MySQL](#install-and-start-mysql)
     - [Load the prepared MySQL script](#load-the-prepared-mysql-script)
 - [PostgreSQL database](#postgresql-database)
-    - [Install and start PostgreSQL](#install-and-start-postgresql)
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
 - [SQL Server database](#slq-server-database)
-    - [Install and start SQL Server](#install-and-start-sql-server)
     - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
 - [Oracle database](#oracle-database)
     - [Install and start Oracle](#install-and-start-oracle-database-on-mac)
@@ -34,10 +30,6 @@ Now you should see the script executed in the right sidebar. You are ready to ty
 
 ## SQLite database
 
-SQLite is a lightweight RDBMS that you can use on your computer. If you don't have SQLite installed on your computer, you can follow the following approaches to install SQLite.
-
-### Install SQLite
-
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#sqlite-database) in the `chapter_01` folder to install SQLite first.
 
 ### Load the prepared SQLite script
@@ -48,7 +40,7 @@ The script prepared for SQLite database is [`sqlite_db.sql`](./sqlite_db.sql). Y
 2. **** Run the following command, and you will be in the SQLite console environment:
 
 ```
-sqlite3 onlinestore.db
+sqlite3 onlinestore_chapter2.db
 ```
 
 3. In the same SQLite console environment (e.g., the line prompt starts with `sqlite>`), run the following command to load the script:
@@ -66,10 +58,6 @@ sqlite3 onlinestore.db
 If you see `products` and `review`, that means the script is loaded successfully. In the same SQLite console environment, you can run any SQL queries you want, including the examples covered by Chapter 2. You can always quit the SQLite console by typing `.quit` and pressing `Enter`.
 
 ## MySQL database
-
-MySQL is a popular open-source RDBMS. We would recommend you to install MySQL in different ways depending on your operating system.
-
-### Install and start MySQL
 
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/##mysql-database) in the `chapter_01` folder to install MySQL first.
 
@@ -102,10 +90,6 @@ In the MySQL console environment, you can run any SQL queries you want, includin
 
 ## PostgreSQL database
 
-PostgreSQL is a popular open-source RDBMS. If you don't have PostgreSQL installed on your computer, you can follow the following approaches to install SQLite.
-
-### Install and start PostgreSQL
-
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#postgresql-database) in the `chapter_01` folder to install PostgreSQL first.
 
 ### Load the prepared PostgreSQL script
@@ -124,7 +108,7 @@ psql -U postgres
 3. In the console environment, create a database named `onlinestore` by running the following command:
 
 ```
-CREATE DATABASE onlinestore IF NOT EXISTS;
+CREATE DATABASE onlinestore_chapter2;
 ```
 
 4. In the console environment, use the database `onlinestore` by running the following command:

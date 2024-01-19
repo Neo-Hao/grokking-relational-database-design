@@ -8,19 +8,17 @@
  Note:          This script is for MySQL 8.0 or above.
 *************************************************************************************/
 
-CREATE DATABASE IF NOT EXISTS onlinestore;
+CREATE DATABASE IF NOT EXISTS onlinestore_chapter2;
 
-USE onlinestore;
+USE onlinestore_chapter2;
 
 DROP TABLE IF EXISTS product;
-
 CREATE TABLE product (
-    product_id INT NOT NULL,
+    product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
-    manufacturer TEXT NOT NULL,
-    PRIMARY KEY (product_id)
+    manufacturer TEXT NOT NULL
 );
 
 INSERT INTO
@@ -104,13 +102,11 @@ VALUES
     );
 
 DROP TABLE IF EXISTS review;
-
 CREATE TABLE review (
-    review_id BIGINT NOT NULL,
+    review_id BIGINT PRIMARY KEY,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
     datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (review_id),
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
 

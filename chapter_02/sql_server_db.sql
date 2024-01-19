@@ -2,39 +2,25 @@
  RDBMS:          SQL server
  Create Date:    01/16/2024
  Author:         Qiang Hao
- Description:    Create a product table and insert some data for the onlinestore database.
+ Description:    Create a product table and insert some data for the onlinestore_chapter2 database.
  Note:           This script is for SQL Server 2019 or above.
  *************************************************************************************/
 -- Check if the database exists and create if it does not
-IF NOT EXISTS (
-    SELECT
-        name
-    FROM
-        master.dbo.sysdatabases
-    WHERE
-        name = N'onlinestore'
-) CREATE DATABASE onlinestore;
-GO
+CREATE DATABASE IF NOT EXISTS onlinestore_chapter2;
 
 -- Use the database
-USE onlinestore;
-GO
-
--- Drop the table if it exists
-IF OBJECT_ID('product', 'U') IS NOT NULL DROP TABLE product;
-GO
+USE onlinestore_chapter2;
 
 -- Create the product table
+DROP TABLE IF EXISTS product;
 CREATE TABLE product (
-    product_id INT NOT NULL,
+    product_id INT PRIMARY KEY,
     name NVARCHAR(MAX) NOT NULL,
     -- TEXT type in MySQL is similar to NVARCHAR(MAX) in SQL Server
     description NVARCHAR(MAX) NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
     manufacturer NVARCHAR(MAX) NOT NULL,
-    PRIMARY KEY (product_id)
 );
-GO
 
 -- Insert data into the product table
 INSERT INTO
@@ -48,7 +34,7 @@ INSERT INTO
 VALUES
     (
         1,
-        N'Atomic Nose Hair Trimmer',
+        N 'Atomic Nose Hair Trimmer',
         N'Trim your nose hairs with the precision of an atomic clock!',
         19.99,
         N'Mad Inventors Inc.'
@@ -70,21 +56,21 @@ VALUES
     (
         4,
         N'Inflatable Briefcase',
-        N'Need more storage space? Inflate our briefcase to double its size!',
+        N 'Need more storage space? Inflate our briefcase to double its size!',
         39.99,
         N'Wacky Wares Ltd.'
     ),
     (
         5,
         N'Unicorn Horn Polish',
-        N'Keep your unicorn''s horn shiny and smooth with our magical polish!',
+        N'Keep your unicorn' 's horn shiny and smooth with our magical polish!',
         9.99,
         N'Silly Supplies Co.'
     ),
     (
         6,
         N'The Mind Probe',
-        N'A device from Star Wars that can extract information directly from a person''s mind.',
+        N'A device from Star Wars that can extract information directly from a person' 's mind.',
         19.99,
         N'Mad Inventors Inc.'
     ),
@@ -111,28 +97,21 @@ VALUES
     ),
     (
         10,
-        N'The Neuralyzer',
-        N'A flashy device that erases people''s memories of specific events or encounters.',
+        N 'The Neuralyzer',
+        N'A flashy device that erases people' 's memories of specific events or encounters.',
         33.55,
         N'Silly Supplies Co.'
     );
-GO
-
--- Drop the review table if it exists
-IF OBJECT_ID('review', 'U') IS NOT NULL DROP TABLE review;
-GO
 
 -- Create the review table
+DROP TABLE IF EXISTS review;
 CREATE TABLE review (
-    review_id BIGINT NOT NULL,
+    review_id BIGINT PRIMARY KEY,
     product_id INT NOT NULL,
     review_text NVARCHAR(MAX) NOT NULL,
-    datetime DATETIME NOT NULL DEFAULT GETDATE(),
-    -- GETDATE() in SQL Server is equivalent to CURRENT_TIMESTAMP in MySQL
-    PRIMARY KEY (review_id),
+    datetime DATETIME NOT NULL DEFAULT GETDATE(), -- GETDATE() in SQL Server is equivalent to CURRENT_TIMESTAMP in MySQL
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
-GO
 
 -- Insert data into the review table
 INSERT INTO
@@ -153,13 +132,13 @@ VALUES
     (
         3,
         2,
-        N'Not worth the money, would not recommend',
+        N 'Not worth the money, would not recommend',
         '2022-01-03 14:15:00'
     ),
     (
         4,
         4,
-        N'Disappointing purchase. Wouldn''t buy again.',
+        N'Disappointing purchase. Wouldn' 't buy again.',
         '2022-01-04 15:00:00'
     ),
     (
@@ -183,7 +162,7 @@ VALUES
     (
         8,
         3,
-        N'Not the best quality, but it gets the job done',
+        N 'Not the best quality, but it gets the job done',
         '2022-01-08 19:00:00'
     ),
     (
@@ -210,4 +189,3 @@ VALUES
         N'I would definitely buy this again, great value for the price',
         '2022-01-12 23:00:00'
     );
-GO

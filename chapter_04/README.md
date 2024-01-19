@@ -6,9 +6,6 @@ The corresponding chapter in this book developed the entities and their attribut
 
 - [View or edit the E-R diagram via dbdiagram](#view-or-edit-the-e-r-diagram-via-dbdiagram)
 - [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
-    - [Windows](#windows)
-    - [Linux](#linux)
-    - [Mac](#mac)
 - [Scripts for different RDBMS](#scripts-for-different-rdbms)
 
 The final state of entities as described in Chapter 4 is as follows:

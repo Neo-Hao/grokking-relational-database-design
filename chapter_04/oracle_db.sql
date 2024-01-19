@@ -2,15 +2,16 @@
  RDBMS:          Oracle Database
  Create Date:    01/17/2023
  Author:         Qiang Hao
- Description:    Create all the tables for the scifi_collective database
+ Description:    Create all the tables for the scificollective_chapter4 database
                  corresponding to what's covered in Chapter 4.
  Note 1:         This script is for Oracle Database 19c or above.
  Note 2:         This script assumes that a database is created and used.
 *************************************************************************************/
 
--- Assuming the schema (user) scifi_collective is already created and being used
+-- Assuming the schema scificollective_chapter4 is already created and being used
 
 -- Table payment_method
+DROP TABLE IF EXISTS payment_method;
 CREATE TABLE payment_method (
   payment_id INT PRIMARY KEY,
   name VARCHAR2(30),
@@ -21,6 +22,7 @@ CREATE TABLE payment_method (
 );
 
 -- Table product
+DROP TABLE IF EXISTS product;
 CREATE TABLE product (
   code CHAR(12) PRIMARY KEY,
   name VARCHAR2(100),
@@ -33,6 +35,7 @@ CREATE TABLE product (
 );
 
 -- Table purchase
+DROP TABLE IF EXISTS purchase;
 CREATE TABLE purchase (
   purchase_id INT PRIMARY KEY,
   total_price NUMBER(13,2),
@@ -42,6 +45,7 @@ CREATE TABLE purchase (
 );
 
 -- Table review
+DROP TABLE IF EXISTS review;
 CREATE TABLE review (
   review_id INT PRIMARY KEY,
   review_text CLOB,
@@ -49,6 +53,7 @@ CREATE TABLE review (
 );
 
 -- Table user
+DROP TABLE IF EXISTS user;
 CREATE TABLE user (
   email VARCHAR2(320) PRIMARY KEY,
   username VARCHAR2(30),

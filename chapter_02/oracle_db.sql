@@ -11,11 +11,8 @@
 
 -- Assuming the 'onlinestore' schema is already in use and the user has necessary privileges.
 
-DROP TABLE product CASCADE CONSTRAINTS;
-
-DROP TABLE review CASCADE CONSTRAINTS;
-
 -- Creating the 'product' table
+DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id NUMBER NOT NULL,
     name VARCHAR2(255) NOT NULL,
@@ -107,7 +104,8 @@ VALUES
     );
 
 -- Creating the 'review' table
-CREATE TABLE review (
+DROP TABLE IF EXISTS review;
+CREATE TABLE IF NOT EXISTS review (
     review_id NUMBER NOT NULL,
     product_id NUMBER NOT NULL,
     review_text CLOB NOT NULL,
