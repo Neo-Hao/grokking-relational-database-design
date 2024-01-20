@@ -12,8 +12,11 @@ CREATE DATABASE IF NOT EXISTS onlinestore;
 -- Use the database
 USE onlinestore;
 
--- Create the table
-CREATE TABLE IF NOT EXISTS product (
+-- Drop the table product if it exists
+DROP TABLE IF EXISTS product;
+
+-- Create the table product
+CREATE TABLE product (
     product_id INT PRIMARY KEY,
     name NVARCHAR(MAX) NOT NULL, -- NVARCHAR(MAX) is SQL Server's equivalent of TEXT in MySQL
     description NVARCHAR(MAX) NOT NULL,
