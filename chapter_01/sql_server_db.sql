@@ -7,7 +7,10 @@
  *************************************************************************************/
 
 -- Check if the database exists and create if it does not
-CREATE DATABASE IF NOT EXISTS onlinestore;
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = N'onlinestore')
+BEGIN
+    CREATE DATABASE onlinestore;
+END;
 
 -- Use the database
 USE onlinestore;
