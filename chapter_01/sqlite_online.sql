@@ -5,8 +5,10 @@
  Note:           This script is for the tool named SQLite Online.
 *************************************************************************************/
 
+-- Drop the product table if it exists
 DROP TABLE IF EXISTS product;
 
+-- Create the product table
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
@@ -15,6 +17,7 @@ CREATE TABLE product (
     manufacturer TEXT NOT NULL
 );
 
+-- Insert data into the table
 INSERT INTO
     product (
         product_id,

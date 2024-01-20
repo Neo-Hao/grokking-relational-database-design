@@ -16,14 +16,18 @@ USE onlinestore_chapter2;
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
-    name NVARCHAR(MAX) NOT NULL,
-    -- TEXT type in MySQL is similar to NVARCHAR(MAX) in SQL Server
+    name NVARCHAR(MAX) NOT NULL, -- NVARCHAR(MAX) in SQL Server is equivalent to TEXT in MySQL
     description NVARCHAR(MAX) NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
     manufacturer NVARCHAR(MAX) NOT NULL,
 );
 
 -- Insert data into the product table
+-- In SQL Server, prefixing a string literal with N before storing it in an NVARCHAR 
+-- (or NCHAR or NTEXT) column is important because it signifies that the subsequent 
+-- string is in Unicode format. Unicode data types can store any character from 
+-- any character set, including special characters and characters from non-Latin
+-- languages like Chinese, Japanese, Arabic, etc
 INSERT INTO
     product (
         product_id,
@@ -35,7 +39,7 @@ INSERT INTO
 VALUES
     (
         1,
-        N 'Atomic Nose Hair Trimmer',
+        N'Atomic Nose Hair Trimmer',
         N'Trim your nose hairs with the precision of an atomic clock!',
         19.99,
         N'Mad Inventors Inc.'
@@ -57,21 +61,21 @@ VALUES
     (
         4,
         N'Inflatable Briefcase',
-        N 'Need more storage space? Inflate our briefcase to double its size!',
+        N'Need more storage space? Inflate our briefcase to double its size!',
         39.99,
         N'Wacky Wares Ltd.'
     ),
     (
         5,
         N'Unicorn Horn Polish',
-        N'Keep your unicorn' 's horn shiny and smooth with our magical polish!',
+        N'Keep your unicorn''s horn shiny and smooth with our magical polish!',
         9.99,
         N'Silly Supplies Co.'
     ),
     (
         6,
         N'The Mind Probe',
-        N'A device from Star Wars that can extract information directly from a person' 's mind.',
+        N'A device from Star Wars that can extract information directly from a person''s mind.',
         19.99,
         N'Mad Inventors Inc.'
     ),
@@ -98,8 +102,8 @@ VALUES
     ),
     (
         10,
-        N 'The Neuralyzer',
-        N'A flashy device that erases people' 's memories of specific events or encounters.',
+        N'The Neuralyzer',
+        N'A flashy device that erases people''s memories of specific events or encounters.',
         33.55,
         N'Silly Supplies Co.'
     );
@@ -115,6 +119,11 @@ CREATE TABLE review (
 );
 
 -- Insert data into the review table
+-- In SQL Server, prefixing a string literal with N before storing it in an NVARCHAR 
+-- (or NCHAR or NTEXT) column is important because it signifies that the subsequent 
+-- string is in Unicode format. Unicode data types can store any character from 
+-- any character set, including special characters and characters from non-Latin
+-- languages like Chinese, Japanese, Arabic, etc
 INSERT INTO
     review (review_id, product_id, review_text, datetime)
 VALUES
@@ -133,13 +142,13 @@ VALUES
     (
         3,
         2,
-        N 'Not worth the money, would not recommend',
+        N'Not worth the money, would not recommend',
         '2022-01-03 14:15:00'
     ),
     (
         4,
         4,
-        N'Disappointing purchase. Wouldn' 't buy again.',
+        N'Disappointing purchase. Wouldn''t buy again.',
         '2022-01-04 15:00:00'
     ),
     (
@@ -163,7 +172,7 @@ VALUES
     (
         8,
         3,
-        N 'Not the best quality, but it gets the job done',
+        N'Not the best quality, but it gets the job done',
         '2022-01-08 19:00:00'
     ),
     (

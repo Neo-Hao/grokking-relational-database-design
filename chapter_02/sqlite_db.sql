@@ -13,16 +13,17 @@
 -- Connect to the database
 ATTACH DATABASE 'onlinestore_chapter2.db' AS onlinestore2;
 
+-- Create the product table
 DROP TABLE IF EXISTS onlinestore2.product;
 CREATE TABLE onlinestore2.product (
-    product_id INT NOT NULL,
+    product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
-    manufacturer TEXT NOT NULL,
-    PRIMARY KEY (product_id)
+    manufacturer TEXT NOT NULL
 );
 
+-- Insert data into the product table
 INSERT INTO
     onlinestore2.product (
         product_id,
@@ -103,16 +104,17 @@ VALUES
         'Silly Supplies Co.'
     );
 
+-- Create the review table
 DROP TABLE IF EXISTS onlinestore2.review;
 CREATE TABLE onlinestore2.review (
-    review_id BIGINT NOT NULL,
+    review_id BIGINT PRIMARY KEY,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
     datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (review_id),
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
 
+-- Insert data into the review table
 INSERT INTO
     onlinestore2.review (
         review_id,

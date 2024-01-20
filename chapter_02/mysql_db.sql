@@ -14,7 +14,7 @@ CREATE DATABASE IF NOT EXISTS onlinestore_chapter2;
 -- Use the onlinestore_chapter2 database
 USE onlinestore_chapter2;
 
--- Create the product table and insert some data
+-- Create the product table
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
@@ -24,6 +24,7 @@ CREATE TABLE product (
     manufacturer TEXT NOT NULL
 );
 
+-- Insert data into the product table
 INSERT INTO
     product (
         product_id,
@@ -104,7 +105,7 @@ VALUES
         'Silly Supplies Co.'
     );
 
--- Create the review table and insert some data
+-- Create the review table
 DROP TABLE IF EXISTS review;
 CREATE TABLE review (
     review_id BIGINT PRIMARY KEY,
@@ -114,6 +115,7 @@ CREATE TABLE review (
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
 
+-- Insert data into the review table
 INSERT INTO
     review (
         review_id,

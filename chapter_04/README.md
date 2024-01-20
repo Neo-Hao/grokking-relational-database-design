@@ -1,13 +1,12 @@
 # Entities and attributes
 
-Practioners use tools such as dbdiagram.io or MySQL Workbench to create and edit E-R diagrams. The reason for such choices is that these tools allow you to generate SQL CREATE TABLE statements based on the visualized E-R diagram.
+Practioners use tools such as dbdiagram.io, LucidChart, or MySQL Workbench to create and edit E-R diagrams. 
 
-The corresponding chapter in this book developed the entities and their attributes for the database of The Sci-fi Collective. You can find the developed entities and their attributes, as well as how to load them using dbdiagram.io or MySQL Workbench.
+The corresponding chapter in this book developed the entities and their attributes for the database of The Sci-fi Collective. You can find the developed entities and their attributes, as well as how to load (or check) them using corresponding tools.
 
 - [View or edit the E-R diagram via dbdiagram](#view-or-edit-the-e-r-diagram-via-dbdiagram)
 - [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
 - [View or edit the E-R diagram via Lucidchart](#view-or-edit-the-e-r-diagram-via-lucidchart)
-- [Scripts for different RDBMS](#scripts-for-different-rdbms)
 
 The final state of entities as described in Chapter 4 is as follows:
 
@@ -20,7 +19,7 @@ The final state of entities as described in Chapter 4 is as follows:
 1. Visit the [dbdiagram.io](https://dbdiagram.io/home) website, and log into your account.
 2. Click on the "Import Database" button on the left side of the page.
 3. Click on the "Upload a file" button.
-4. Select the file `mysql_db.sql` and click "Open".
+4. Select the file `dbdiagram.sql` and click "Open".
 5. Click on the "Import" button.
 6. You can now view the current E-R diagram. Changes can be made to the left. You can use "Export" to generate a new SQL file.
 
@@ -36,7 +35,7 @@ MySQL Workbench is an administration tool for MySQL as much as an E-R diagrammin
 2. Download the `mysql-workbench-community-8.0.33-winx64.msi` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
 3. Follow the installation instructions from the installer.
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-5. The file (`er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
 ### Linux
@@ -45,7 +44,7 @@ MySQL Workbench is an administration tool for MySQL as much as an E-R diagrammin
 2. Download the `mysql-workbench-community-8.0.33-1.el8.x86_64.rpm` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters and do not need to on this one).
 3. Follow the installation instructions from the installer.
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-5. The file (`er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
 ### Mac
@@ -54,12 +53,13 @@ MySQL Workbench is an administration tool for MySQL as much as an E-R diagrammin
 2. Download the `mysql-workbench-community-8.0.33-macos-x86_64.dmg` file from "Other Downloads" section. The Download button is to the right. Make sure to download this file since if you download the MySQL Installer it will also install MySQL on your system (which we assume you already have installed from previous chapters).
 3. Follow the installation instructions from the installer.
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
-5. The file (`er-diagram.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
+5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
 
 ## View or edit the E-R diagram via Lucidchart
 
-If you choose to use Lucidchart, we have designed a template that can be found on Lucidchart. After creating an account do the following:
+Lucidchart is a web-based diagramming application that allows users to visually collaborate on drawing, revising and sharing charts and diagrams, and improve processes, systems, and organizational structures. If you choose to use Lucidchart, we have designed a template that can be found on Lucidchart. After creating an account do the following:
+
 1. Navigate to [Lucid](https://lucid.app/)
 2. Click New -> Lucidchart -> Create from Template
 3. In the search box ("Search all templates"), type "grokking relational"
@@ -67,15 +67,3 @@ If you choose to use Lucidchart, we have designed a template that can be found o
 
 You can also view the template without having an account by following this link: 
 [Lucidchart Chapter 4 Diagram](https://lucid.app/documents/view/976e817c-4c62-47ee-8e62-443635e46855)
-
-## Scripts for different RDBMS 
-
-We have provided scripts for different RDBMS that correspond to the final state of the entities as described in Chapter 4. You can find these scripts as follows:
-
-- [MySQL](./mysql_db.sql)
-- [PostgreSQL](./postgresql_db.sql)
-- [SQLite](./sqlite_db.sql)
-- [SQL Server](./sqlserver_db.sql)
-- [Oracle](./oracle_db.sql)
-
-You can refer to [the README files in the folder of Chapter 1](../chapter_01/README.md) for instructions on how to load these scripts into the corresponding RDBMS.

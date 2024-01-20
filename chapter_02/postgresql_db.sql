@@ -14,12 +14,11 @@
 -- Create the product table and insert some data
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
-    product_id INT NOT NULL,
+    product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
-    manufacturer TEXT NOT NULL,
-    PRIMARY KEY (product_id)
+    manufacturer TEXT NOT NULL
 );
 
 INSERT INTO
@@ -105,11 +104,10 @@ VALUES
 -- Create the review table and insert some data
 DROP TABLE IF EXISTS review;
 CREATE TABLE review (
-    review_id BIGINT NOT NULL,
+    review_id BIGINT PRIMARY KEY,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
-    datetime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (review_id),
+    datetime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- TIMESTAMP is PostgreSQL's equivalent of DATETIME in MySQL
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
 

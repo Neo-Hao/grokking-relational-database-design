@@ -23,9 +23,9 @@ The scripts that you can use to create databases/tables for this chapter are all
     - [Install and start SQL server on Windows](#install-and-start-sql-server-on-windows)
     - [Install and start SQL server on Linux](#install-and-start-sql-server-on-linux)
     - [Load the prepared SQL server script](#load-the-prepared-sql-server-script)
-- [Oracle database](#oracle-database)
+<!-- - [Oracle database](#oracle-database)
     - [Install and start Oracle database on Mac or Linux](#install-and-start-oracle-database-on-mac-or-linux)
-    - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows)
+    - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows) -->
 
 
 ## SQLite online
@@ -465,7 +465,7 @@ USE onlinestore;
 SELECT * FROM product;
 ```
 
-## Oracle database
+<!-- ## Oracle database
 
 ### Install and start Oracle database on Mac or Linux
 
@@ -481,4 +481,4 @@ Follow the instructions to install Oracle database on your Windows machine:
 
 1. Run the installer (setup.msi). Setup a root password for the database and make a note of it. Then proceed with the installation instructions.
 2. After installation, you may need to install Oracle SQL Developer depending on if you want a graphical dashboard to manage Oracle database. A link to download Oracle SQL Developer is usually provided at the end of the Oracle database installation process, or you can download it from https://www.oracle.com/tools/downloads/sqldev-downloads.html.
-3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer.
+3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer. -->

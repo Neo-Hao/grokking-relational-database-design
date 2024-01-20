@@ -14,12 +14,11 @@
 -- Creating the 'product' table
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
-    product_id NUMBER NOT NULL,
-    name VARCHAR2(255) NOT NULL,
+    product_id NUMBER PRIMARY KEY, -- NUMBER is Oracle's equivalent of INT or DECIMAL in MySQL
+    name VARCHAR2(255) NOT NULL, -- VARCHAR2 is Oracle's equivalent of TEXT in MySQL
     description VARCHAR2(4000) NOT NULL,
-    price NUMBER(5, 2) NOT NULL,
-    manufacturer VARCHAR2(255) NOT NULL,
-    CONSTRAINT pk_product PRIMARY KEY (product_id)
+    price NUMBER(5, 2) NOT NULL, -- NUMBER(5, 2) is Oracle's equivalent of DECIMAL(5, 2) in MySQL
+    manufacturer VARCHAR2(255) NOT NULL
 );
 
 -- Inserting data into 'product'
@@ -105,16 +104,23 @@ VALUES
 
 -- Creating the 'review' table
 DROP TABLE IF EXISTS review;
-CREATE TABLE IF NOT EXISTS review (
-    review_id NUMBER NOT NULL,
+CREATE TABLE review (
+    review_id NUMBER PRIMARY KEY, -- NUMBER is Oracle's equivalent of INT or DECIMAL in MySQL
     product_id NUMBER NOT NULL,
-    review_text CLOB NOT NULL,
-    datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    CONSTRAINT pk_review PRIMARY KEY (review_id),
+    review_text VARCHAR2(4000) NOT NULL, -- VARCHAR2 is Oracle's equivalent of TEXT in MySQL
+    datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, -- TIMESTAMP is Oracle's equivalent of DATETIME in MySQL
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
 
 -- Inserting data into 'review'
+-- In Oracle SQL, TO_TIMESTAMP is a function used to convert a string 
+-- representation of a date and time into a TIMESTAMP value. This function is 
+-- particularly useful when you need to work with date and time data that 
+-- comes in a string format and you need to convert it to a TIMESTAMP data 
+-- type for storage, comparison, or calculation purposes. The TO_TIMESTAMP 
+-- function allows you to specify the format of the input string so that Oracle 
+-- knows how to correctly interpret it. The basic syntax of the TO_TIMESTAMP 
+-- function is TO_TIMESTAMP(string, format_mask)
 INSERT INTO
     review (review_id, product_id, review_text, datetime)
 VALUES

@@ -10,8 +10,10 @@
 -- Connect to the database
 ATTACH DATABASE 'onlinestore.db' AS onlinestore;
 
+-- Drop the product table if it exists
 DROP TABLE IF EXISTS onlinestore.product;
 
+-- Create the product table
 CREATE TABLE onlinestore.product (
     product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
@@ -20,6 +22,7 @@ CREATE TABLE onlinestore.product (
     manufacturer TEXT NOT NULL
 );
 
+-- Insert data into the table
 INSERT INTO
     onlinestore.product (
         product_id,
