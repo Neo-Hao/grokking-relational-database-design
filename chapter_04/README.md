@@ -18,7 +18,7 @@ The final state of entities as described in Chapter 4 is as follows:
 
 What we achieved in this chapter is not the end of the E-R diagram that we aim to develop. As a result, we only provide a MySQL script (`dbdiagram.sql`) that correspond to the final state of entities and attributes of this chapter. 
 
-<img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'70%';">
+<img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'50%';">
 
 When you import the provided script into dbdiagram.io, you will be able to view or edit the corresponding E-R diagram. You can also generate a new SQL script for PostgreSQL or SQL server from the diagram. To import the script, please follow the steps below:
 
