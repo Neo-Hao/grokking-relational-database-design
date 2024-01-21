@@ -12,10 +12,10 @@ If you are using SQL Server, you should refer to the SQL script contained in thi
 * Data insertion of string values was changed from `'...'` to `N'...'`: SQL Server requires the `N` prefix for string values, e.g., `N'Apple'`. SQL Server uses the UCS-2 encoding for string values, which is a subset of UTF-16. The `N` prefix tells SQL Server to use UTF-16 encoding for the string value.
 * `GETDATE()` was used instead of `CURRENT_TIMESTAMP`: SQL Server doesn't support `CURRENT_TIMESTAMP` function.
 
-If you are using Oracle database, you should refer to the SQL script contained in this folder and pay attention to the following differences that were made to make the script compatible with Oracle database:
+<!-- If you are using Oracle database, you should refer to the SQL script contained in this folder and pay attention to the following differences that were made to make the script compatible with Oracle database:
 
 * `VARCHAR2` was used instead of `TEXT`: Oracle database doesn't support `TEXT` data type.
-* `NUMBER` was used instead of `INT` and `DECIMAL`: Oracle database doesn't support `INT` or `DECIMAL` data types.
+* `NUMBER` was used instead of `INT` and `DECIMAL`: Oracle database doesn't support `INT` or `DECIMAL` data types. -->
 
 How to load the prepared scripts using different RDBMS and tools are covered in the following subsections.
 
@@ -28,8 +28,8 @@ How to load the prepared scripts using different RDBMS and tools are covered in 
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
 - [SQL Server database](#slq-server-database)
     - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
-- [Oracle database](#oracle-database)
-    - [Install and start Oracle](#install-and-start-oracle-database-on-mac)
+<!-- - [Oracle database](#oracle-database)
+    - [Install and start Oracle](#install-and-start-oracle-database-on-mac) -->
 
 ## SQLite online
 
