@@ -13,20 +13,26 @@ The final state of entities as described in Chapter 5 is as follows:
 
 ## View or edit the E-R diagram via dbdiagram
 
-[dbdiagram.io](https://dbdiagram.io) is a free online service that allows you to create and edit E-R diagrams. You can also generate SQL CREATE TABLE statements given a diagram using dbdiagram.io. The current file contains all entities as described in their final state in Chapter 5. To view or edit the E-R diagram via diagram.io, you can use the following steps:
+[dbdiagram.io](https://dbdiagram.io) is a free online tool for drawing E-R Diagrams by writing code. You can also generate `SQL CREATE TABLE` statements given a diagram using dbdiagram.io. dbdiagram.io supports three RDBMS: MySQL, PostgreSQL, and SQL Server.
+
+What we achieved in this chapter is not the end of the E-R diagram that we aim to develop. As a result, we only provide a MySQL script (`dbdiagram.sql`) that correspond to the final state of entities and relationships of this chapter. 
+
+<img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'70%';">
+
+When you import the provided script into dbdiagram.io, you will be able to view or edit the corresponding E-R diagram. You can also generate a new SQL script for PostgreSQL or SQL server from the diagram. To import the script, please follow the steps below:
 
 1. Visit the [dbdiagram.io](https://dbdiagram.io/home) website, and log into your account.
-2. Click on the "Import Database" button on the left side of the page.
-3. Click on the "Upload a file" button.
-4. Select the file `dbdiagram.sql` and click "Open".
-5. Click on the "Import" button.
-6. You can now view the current E-R diagram. Changes can be made to the left. You can use "Export" to generate a new SQL file.
+2. Click on the "Import Database" button in the top navigation bar.
+3. You can either copy and paste the content of the `dbdiagram.sql` file into the text area or click on the "Upload .sql" button to upload the `dbdiagram.sql` file.
+4. When you are done, click on the "Submit" button.
 
 You can refer to [the manual of diagram.io](https://dbdiagram.io/docs/) if you have any questions about diagram.io.
 
 ## View or edit the E-R diagram via MySQL Workbench
 
-MySQL Workbench is an administration tool for MySQL as much as an E-R diagramming software. There are extensive tutorials for using the software but specifically for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html)
+MySQL Workbench is an administration tool for MySQL as much as an E-R diagramming software. Different from dbdiagram.io, MySQL Workbench is a desktop application that you need to install on your computer. Additionally, MySQL only supports MySQL as the RDBMS. However, you can use use MySQL Workbench to generate a MySQL script first, and then convert it to scripts for other RSBMS using SQL converter tools such as [SQLines](https://sqlines.com/online).
+
+There are extensive tutorials for how to use MySQL Workbench for Database Design, you can use this part of the manual as a reference: [Database Design and Modeling](https://dev.mysql.com/doc/workbench/en/wb-data-modeling.html). MySQL Workbench is available for Windows, Linux, and Mac. 
 
 ### Windows
 

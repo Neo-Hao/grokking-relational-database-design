@@ -19,6 +19,7 @@ COLLATE utf8_general_ci;
 USE scificollective_chapter5;
 
 -- Table payment_method
+DROP TABLE IF EXISTS payment_method;
 CREATE TABLE payment_method (
   payment_id INT PRIMARY KEY,
   name VARCHAR(30),
@@ -28,7 +29,7 @@ CREATE TABLE payment_method (
   billing_address VARCHAR(255),
   email VARCHAR(320),
   CONSTRAINT fk_payment_method_user FOREIGN KEY (email) REFERENCES user (email)
-) 
+);
 
 -- Table product
 DROP TABLE IF EXISTS product;
@@ -41,7 +42,7 @@ CREATE TABLE product (
   price DECIMAL(7, 2),
   cost DECIMAL(7, 2),
   inventory_quantity INT
-) 
+);
 
 -- Table purchase
 DROP TABLE IF EXISTS purchase;
@@ -55,7 +56,7 @@ CREATE TABLE purchase (
   email VARCHAR(320),
   CONSTRAINT fk_purchase_payment_method FOREIGN KEY (payment_id) REFERENCES payment_method (payment_id),
   CONSTRAINT fk_purchase_user FOREIGN KEY (email) REFERENCES user (email)
-) 
+);
 
 -- Table purchase_product
 DROP TABLE IF EXISTS purchase_product;
@@ -65,7 +66,7 @@ CREATE TABLE purchase_product (
   PRIMARY KEY (purchase_id, code),
   CONSTRAINT fk_product_has_purchase_product FOREIGN KEY (code) REFERENCES product (code),
   CONSTRAINT fk_product_has_purchase_purchase FOREIGN KEY (purchase_id) REFERENCES purchase (purchase_id)
-) 
+); 
 
 -- Table review
 DROP TABLE IF EXISTS review;
@@ -77,7 +78,7 @@ CREATE TABLE review (
   code CHAR(12),
   CONSTRAINT fk_review_user FOREIGN KEY (email) REFERENCES user (email),
   CONSTRAINT fk_review_product FOREIGN KEY (code) REFERENCES product (code)
-) 
+);
 
 -- Table user
 DROP TABLE IF EXISTS user;
@@ -90,7 +91,7 @@ CREATE TABLE user (
   address VARCHAR(255),
   phone_number VARCHAR(15),
   last_login_time TIMESTAMP
-) 
+); 
 
 -- Table user_address
 DROP TABLE IF EXISTS user_address;
@@ -99,64 +100,7 @@ CREATE TABLE user_address (
   street_address VARCHAR(255),
   address_line_optional VARCHAR(100),
   city VARCHAR(100),
-  state ENUM(
-    'AL',
-    'AK',
-    'AZ',
-    'AR',
-    'CA',
-    'CO',
-    'CT',
-    'DE',
-    'FL',
-    'GA',
-    'HI',
-    'ID',
-    'IL',
-    'IN',
-    'IA',
-    'KS',
-    'KY',
-    'LA',
-    'ME',
-    'MD',
-    'MA',
-    'MI',
-    'MN',
-    'MS',
-    'MO',
-    'MT',
-    'NE',
-    'NV',
-    'NH',
-    'NJ',
-    'NM',
-    'NY',
-    'NC',
-    'ND',
-    'OH',
-    'OK',
-    'OR',
-    'PA',
-    'RI',
-    'SC',
-    'SD',
-    'TN',
-    'TX',
-    'UT',
-    'VT',
-    'VA',
-    'WA',
-    'WV',
-    'WI',
-    'WY',
-    'DC',
-    'PR',
-    'VI',
-    'GU',
-    'MP',
-    'AS'
-  ),
+  state CHAR(2),
   postal_code CHAR(5),
   CONSTRAINT fk_user_address_user FOREIGN KEY (email) REFERENCES user (email)
-)
+);
