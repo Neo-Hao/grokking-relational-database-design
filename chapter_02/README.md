@@ -26,7 +26,7 @@ How to load the prepared scripts using different RDBMS and tools are covered in 
     - [Load the prepared MySQL script](#load-the-prepared-mysql-script)
 - [PostgreSQL database](#postgresql-database)
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
-- [SQL Server database](#slq-server-database)
+- [SQL Server database](#sql-server-database)
     - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
 <!-- - [Oracle database](#oracle-database)
     - [Install and start Oracle](#install-and-start-oracle-database-on-mac) -->
