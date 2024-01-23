@@ -14,12 +14,16 @@
 ATTACH DATABASE 'onlinestore_chapter2.db' AS onlinestore2;
 
 -- Create the product table
+-- SQlite database doesn't support DECIMAL data type, so we use TEXT instead
+-- This is typical when the precision of the number is important
+-- The alternative is to use REAL, which is a floating-point number and is not precise
+-- VARCHAR is the same as TEXT and comes with no length limit in SQLite, so we use TEXT instead
 DROP TABLE IF EXISTS onlinestore2.product;
 CREATE TABLE onlinestore2.product (
     product_id INT PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
-    price DECIMAL(5, 2) NOT NULL,
+    price TEXT NOT NULL,
     manufacturer TEXT NOT NULL
 );
 
@@ -37,82 +41,89 @@ VALUES
         1,
         'Atomic Nose Hair Trimmer',
         'Trim your nose hairs with the precision of an atomic clock!',
-        19.99,
+        '19.99',
         'Mad Inventors Inc.'
     ),
     (
         2,
         'Selfie Toaster',
         'Get your face on your toast every morning with our selfie toaster!',
-        24.99,
+        '24.99',
         'Goofy Gadgets Corp.'
     ),
     (
         3,
         'Cat-Poop Coffee',
         'The only coffee made from the finest cat poop beans!',
-        29.99,
+        '29.99',
         'Absurd Accessories'
     ),
     (
         4,
         'Inflatable Briefcase',
         'Need more storage space? Inflate our briefcase to double its size!',
-        39.99,
+        '39.99',
         'Wacky Wares Ltd.'
     ),
     (
         5,
         'Unicorn Horn Polish',
         'Keep your unicorn''s horn shiny and smooth with our magical polish!',
-        9.99,
+        '9.99',
         'Silly Supplies Co.'
     ),
     (
         6,
         'The Mind Probe',
         'A device from Star Wars that can extract information directly from a person''s mind.',
-        19.99,
+        '19.99',
         'Mad Inventors Inc.'
     ),
     (
         7,
         'Lightsabers',
         'Elegant and deadly energy swords wielded by Jedi and Sith alike.',
-        25,
+        '25',
         'Mad Inventors Inc.'
     ),
     (
         8,
         'The Sonic Screwdriver',
         'A versatile tool capable of performing a wide variety of tasks, from unlocking doors to repairing electronics.',
-        15.1,
+        '15.1',
         'Absurd Accessories'
     ),
     (
         9,
         'The Infinite Improbability Generator',
         'A device that can create impossible and absurd events, such as a spaceship suddenly turning into a giant sperm whale.',
-        9.99,
+        '9.99',
         'Silly Supplies Co.'
     ),
     (
         10,
         'The Neuralyzer',
         'A flashy device that erases people''s memories of specific events or encounters.',
-        33.55,
+        '33.55',
         'Silly Supplies Co.'
     );
 
 -- Create the review table
+--- SQLite doesn't support DATETIME data type, so we use TEXT instead
+-- This is a common workaround for SQLite
+-- The datetime('now') function is used to get the current timestamp 
+-- in a format compatible with SQLite.
 DROP TABLE IF EXISTS onlinestore2.review;
 CREATE TABLE onlinestore2.review (
-    review_id BIGINT PRIMARY KEY,
+    review_id INT PRIMARY KEY,
     product_id INT NOT NULL,
     review_text TEXT NOT NULL,
-    datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    datetime TEXT NOT NULL DEFAULT (datetime('now')),
     CONSTRAINT fk_product_review FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
+
+-- Enable foreign key constraints
+PRAGMA foreign_keys = ON;
 
 -- Insert data into the review table
 INSERT INTO
