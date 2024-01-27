@@ -19,7 +19,7 @@ CREATE TABLE product (
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL(5, 2) NOT NULL,
-    manufacturer TEXT NOT NULL,
+    manufacturer TEXT NOT NULL
 );
 
 INSERT INTO
