@@ -482,7 +482,7 @@ USE onlinestore;
 SELECT * FROM product;
 ```
 
-<!-- ## Oracle database
+## Oracle database
 
 ### Install and start Oracle database on Mac or Linux
 
@@ -498,4 +498,54 @@ Follow the instructions to install Oracle database on your Windows machine:
 
 1. Run the installer (setup.msi). Setup a root password for the database and make a note of it. Then proceed with the installation instructions.
 2. After installation, you may need to install Oracle SQL Developer depending on if you want a graphical dashboard to manage Oracle database. A link to download Oracle SQL Developer is usually provided at the end of the Oracle database installation process, or you can download it from https://www.oracle.com/tools/downloads/sqldev-downloads.html.
-3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer. -->
+3. After installation, you may need to configure Oracle database, which involves setting up user accounts, configuring network protocols, or setting database properties. All such tasks can be done through Oracle SQL Developer. When everything is wrapped up, you may need to restart your computer.
+
+### Load the prepared Oracle script
+
+1. Open SQL developer and connect to the database. Look for the plus icon on the left hand side of the screen and click on it. Then select "New Database Connection". You will be presented with a window to enter the connection details.
+2. You can use the following information to connect to the database. If you are using the Express edition, the hostname should be `localhost`. If you are using the Developer edition, the hostname should be `localhost`. The port should be `1521`. The SID should be `XE`. The username is `sys` with role `SYSDBA` and the password that you've set during the installation. Also make sure to name the connection.
+3. After the connection opens, use File -> Open from the left hand side corner of the top menu and open the oracle_db.sql file. Then click on the green play button to execute the script ("Run Script" or use F5). You should see the following output in the Script Output tab:
+
+```
+PL/SQL procedure successfully completed.
+
+
+Table PRODUCT created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+```
+
+4. You can verify that the product has been imported by running the following commands in a new query window ("Unshared SQL Worksheet" or Ctrl + Shift + N):
+
+```
+SELECT * FROM product;
+``` 
