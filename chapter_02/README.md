@@ -35,7 +35,7 @@ How to load the prepared scripts using different RDBMS and tools are covered in 
 - [SQL Server database](#sql-server-database)
     - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
 <!-- - [Oracle database](#oracle-database)
-    - [Install and start Oracle](#install-and-start-oracle-database-on-mac) -->
+    - [Load the prepared Oracle script](#load-the-prepared-oracle-script) -->
 
 ## SQLite online
 
@@ -82,7 +82,7 @@ If you see `products` and `review`, that means the script is loaded successfully
 
 ## MySQL database
 
-In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/##mysql-database) in the `chapter_01` folder to install MySQL first.
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#mysql-database) in the `chapter_01` folder to install MySQL first.
 
 ### Load the prepared MySQL script
 
@@ -150,20 +150,14 @@ In the same console environment, you can run any SQL queries you want, including
 
 ## SQL Server database
 
-SQL Server is a popular RDBMS developed by Microsoft. If you don't have SQL Server installed on your computer, you will need to install it first.
-
-### Install and start SQL Server
-
-In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#slq-server-database) in the `chapter_01` folder to install SQL Server first.
+In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#sql-server) in the `chapter_01` folder to install SQL Server first.
 
 ### Load the prepared SQL Server script
 
 The script prepared for SQL Server database is [`sql_server_db.sql`](./sql_server_db.sql). You can refer to [the same instructions for Chapter 1](../chapter_01/README.md#load-the-prepared-sql-server-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
 
-## Oracle database
-
-Oracle is a popular RDBMS developed by Oracle Corporation. If you don't have Oracle installed on your computer, you will need to install it first.
-
-### Install and start Oracle database
+<!-- ## Oracle database
 
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#oracle-database) in the `chapter_01` folder to install Oracle first.
+
+### Load the prepared Oracle script -->

@@ -35,14 +35,15 @@ How to load the prepared scripts using different RDBMS and tools are covered in 
     - [Install and start PostgreSQL on Windows](#install-and-start-postgresql-on-windows)
     - [Install and start PostgreSQL on Linux](#install-and-start-postgresql-on-linux)
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
-- [SQL Server database](#slq-server-database)
+- [SQL Server database](#sql-server)
     - [Install and start SQL server on Mac](#install-and-start-sql-server-on-mac)
     - [Install and start SQL server on Windows](#install-and-start-sql-server-on-windows)
     - [Install and start SQL server on Linux](#install-and-start-sql-server-on-linux)
     - [Load the prepared SQL server script](#load-the-prepared-sql-server-script)
-<!-- - [Oracle database](#oracle-database)
+- [Oracle database](#oracle-database)
     - [Install and start Oracle database on Mac or Linux](#install-and-start-oracle-database-on-mac-or-linux)
-    - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows) -->
+    - [Install and start Oracle database on Windows](#install-and-start-oracle-database-on-windows)
+    - [Load the prepared Oracle script](#load-the-prepared-oracle-script)
 
 
 ## SQLite online
