@@ -34,8 +34,8 @@ How to load the prepared scripts using different RDBMS and tools are covered in 
     - [Load the prepared PostgreSQL script](#load-the-prepared-postgresql-script)
 - [SQL Server database](#sql-server-database)
     - [Load the prepared SQL Server script](#load-the-prepared-sql-server-script)
-<!-- - [Oracle database](#oracle-database)
-    - [Load the prepared Oracle script](#load-the-prepared-oracle-script) -->
+- [Oracle database](#oracle-database)
+    - [Load the prepared Oracle script](#load-the-prepared-oracle-script)
 
 ## SQLite online
 
@@ -156,8 +156,10 @@ In case you jump to this chapter directly, you need to refer to [the README file
 
 The script prepared for SQL Server database is [`sql_server_db.sql`](./sql_server_db.sql). You can refer to [the same instructions for Chapter 1](../chapter_01/README.md#load-the-prepared-sql-server-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
 
-<!-- ## Oracle database
+## Oracle database
 
 In case you jump to this chapter directly, you need to refer to [the README file](../chapter_01/README.md/#oracle-database) in the `chapter_01` folder to install Oracle first.
 
-### Load the prepared Oracle script -->
+### Load the prepared Oracle script
+
+The script prepared for Oracle is [`sql_server_db.sql`](./oracle_db.sql). You can refer to [the same instructions for Chapter 2](../chapter_01/README.md#load-the-prepared-oracle-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
