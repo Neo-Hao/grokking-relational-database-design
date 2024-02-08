@@ -162,4 +162,4 @@ In case you jump to this chapter directly, you need to refer to [the README file
 
 ### Load the prepared Oracle script
 
-The script prepared for Oracle is [`sql_server_db.sql`](./oracle_db.sql). You can refer to [the same instructions for Chapter 2](../chapter_01/README.md#load-the-prepared-oracle-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
+The script prepared for Oracle is [`sql_server_db.sql`](./oracle_db.sql). You can refer to [the same instructions for Chapter 1](../chapter_01/README.md#load-the-prepared-oracle-script) to load the script. Please remember that you should load the script from the folder of `chapter_02` instead of `chapter_01`.
