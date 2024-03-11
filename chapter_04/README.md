@@ -6,7 +6,6 @@ The corresponding chapter in this book developed the entities and their attribut
 
 - [View or edit the E-R diagram via dbdiagram](#view-or-edit-the-e-r-diagram-via-dbdiagram)
 - [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
-- [View or edit the E-R diagram via Lucidchart](#view-or-edit-the-e-r-diagram-via-lucidchart)
 - [Modifications to attributes for different RDBMS](#modifications-to-attributes-for-different-rdbms)
 
 The final state of entities as described in Chapter 4 is as follows:
@@ -62,18 +61,6 @@ There are extensive tutorials for how to use MySQL Workbench for Database Design
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
 5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 4.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
-
-## View or edit the E-R diagram via Lucidchart
-
-Lucidchart is a web-based diagramming application that allows users to visually collaborate on drawing, revising and sharing charts and diagrams. We have designed a template that can be found on Lucidchart. When you create an account on Lucidchart, you can follow the steps below to view or edit the E-R diagram:
-
-1. Navigate to [Lucid](https://lucid.app/)
-2. Click New -> Lucidchart -> Create from Template
-3. In the search box ("Search all templates"), type "grokking relational"
-4. Select the template that corresponds to Chapter 4.
-
-You can also view the template without having an account by following this link: 
-[Lucidchart Chapter 4 Diagram](https://lucid.app/documents/view/976e817c-4c62-47ee-8e62-443635e46855).
 
 ## Modifications to attributes for different RDBMS
 

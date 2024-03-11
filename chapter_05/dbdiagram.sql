@@ -99,7 +99,7 @@ CREATE TABLE user_address (
   street_address VARCHAR(255),
   address_line_optional VARCHAR(100),
   city VARCHAR(100),
-  state CHAR(2),
+  state VARCHAR(20),
   postal_code CHAR(5),
   CONSTRAINT fk_user_address_user FOREIGN KEY (email) REFERENCES user (email)
 );
@@ -111,7 +111,7 @@ CREATE TABLE billing_address (
   street_address VARCHAR(255),
   address_line_optional VARCHAR(100),
   city VARCHAR(100),
-  state CHAR(2),
+  state VARCHAR(20),
   postal_code CHAR(5),
   CONSTRAINT fk_payment_method_billing_address FOREIGN KEY (payment_id) REFERENCES payment_method (payment_id)
 );
