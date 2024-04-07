@@ -21,7 +21,7 @@ In [Grokking Relational Database Design](http://mng.bz/1J2q), you’ll learn how
 There are currently 8 chapters planned for this book. The following table of contents lists the chapters that are currently available in the MEAP, and the chapters that are planned for the final book.
 
 - Chapter 1 - Introduction to Database and SQL ([code](./chapter_01/))
-- Chapter 2 - Related Tabkles and More SQL ([code](./chapter_02/))
+- Chapter 2 - Related Tables and More SQL ([code](./chapter_02/))
 - Chapter 3 - Overview of Database Design (*No code*)
 - Chapter 4 - Entities and Attributes ([code](./chapter_04/))
 - Chapter 5 - Relationships ([code](./chapter_05/))
