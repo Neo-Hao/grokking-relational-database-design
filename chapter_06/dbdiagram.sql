@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS user (
   password VARCHAR(20) NOT NULL,
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
-  address VARCHAR(255) NOT NULL,
   phone_number VARCHAR(15),
   last_login_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (email),
@@ -69,7 +68,6 @@ CREATE TABLE payment_method (
   card_number CHAR(16) NOT NULL,
   expiry_date CHAR(4) NOT NULL,
   csc CHAR(4) NOT NULL,
-  billing_address VARCHAR(255) NOT NULL,
   email VARCHAR(320) NOT NULL,
   CONSTRAINT fk_payment_method_user FOREIGN KEY (email) REFERENCES user (email)
 );
@@ -86,34 +84,37 @@ CREATE TABLE purchase (
 );
 
 
--- Table location
-CREATE TABLE IF NOT EXISTS location (
-  postal_code CHAR(5) NOT NULL,
-  city VARCHAR(100) NOT NULL,
-  state CHAR(2) NOT NULL,
-  PRIMARY KEY (postal_code)
-);
-
-
 -- Table user_address
 CREATE TABLE IF NOT EXISTS user_address (
   email VARCHAR(320) NOT NULL,
   street_address VARCHAR(255) NOT NULL,
   address_line_optional VARCHAR(100),
+  city VARCHAR(100) NOT NULL,
+  state VARCHAR(20) NOT NULL,
   postal_code CHAR(5) NOT NULL,
   PRIMARY KEY (email),
   CONSTRAINT fk_user_address_user
     FOREIGN KEY (email)
     REFERENCES user (email)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  CONSTRAINT fk_user_address_location1
-    FOREIGN KEY (postal_code)
-    REFERENCES location (postal_code)
-    ON DELETE CASCADE
     ON UPDATE CASCADE
 );
 
+-- Table billing_address
+CREATE TABLE IF NOT EXISTS billing_address (
+  payment_id INT NOT NULL,
+  street_address VARCHAR(255) NOT NULL,
+  address_line_optional VARCHAR(100),
+  city VARCHAR(100) NOT NULL,
+  state VARCHAR(20) NOT NULL,
+  postal_code CHAR(5) NOT NULL,
+  PRIMARY KEY (email),
+  CONSTRAINT fk_billing_address_payment_id
+    FOREIGN KEY (payment_id)
+    REFERENCES user (payment_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 -- Table purchase_product
 DROP TABLE IF EXISTS purchase_product;
@@ -122,6 +123,7 @@ CREATE TABLE purchase_product (
   code CHAR(12) NOT NULL,
   product_price DECIMAL(7,2) NOT NULL,
   product_quantity INT NOT NULL DEFAULT 1,
+  product_name VARCHAR(100) NOT NULL,
   PRIMARY KEY (code, purchase_id),
   CONSTRAINT fk_product_has_purchase_product1
     FOREIGN KEY (code)
