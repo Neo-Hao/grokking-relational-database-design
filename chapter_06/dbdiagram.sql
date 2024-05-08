@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS billing_address (
   PRIMARY KEY (email),
   CONSTRAINT fk_billing_address_payment_id
     FOREIGN KEY (payment_id)
-    REFERENCES user (payment_id)
+    REFERENCES payment_method (payment_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
