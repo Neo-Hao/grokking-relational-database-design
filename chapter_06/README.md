@@ -60,3 +60,45 @@ There are extensive tutorials for how to use MySQL Workbench for Database Design
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
 5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 6.
 6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes.
+
+## Modifications to attributes for different RDBMS
+
+You will need to make some modifications to the attributes for different RDBMS. Considering that this chapter is not the end of the E-R diagram that we are still developing, we won't provide different versions of the E-R diagram tailored to different RDBMS. Instead, we will only describe the necessary modifications for SQL Server, SQLite and Oracle below for your reference.
+
+### MySQL, MariaDB, and PostgreSQL
+
+The entities and attributes depicted in the E-R diagram don't require any modifications for MySQL, MariaDB, and PostgreSQL.
+
+### SQL Server
+
+The following changes need to be made for SQL Server:
+
+**`TIMESTAMP` to `DATETIMEOFFSET`**:  SQL Server uses DATETIMEOFFSET instead of TIMESTAMP. DATETIMEOFFSET stores the date, time, and offset from UTC. DATETIMEOFFSET is a SQL Server-specific data type that is not part of the ANSI SQL standard. DATETIMEOFFSET is used when you need to store the time zone offset of a particular date and time value.
+
+**`VARCHAR` to `NVARCHAR`**: It is recommended to use `NVARCHAR` instead of `VARCHAR` for SQL Server. `VARCHAR` is used for non-Unicode character data. It stores ASCII characters and can represent a limited set of characters (specifically those in the code page of your server's collation setting). `NVARCHAR` is used for Unicode character data -- It can store characters from multiple languages and alphabets and uses two bytes per character.If your application needs to support multiple languages or special characters that are not represented in the default character set, then you should use `NVARCHAR`.
+
+**`TEXT` to `NVARCHAR(MAX)`**: `TEXT` is a deprecated data type in SQL Server. It is recommended to use `NVARCHAR(MAX)` instead of `TEXT`. `NVARCHAR(MAX)` is used for Unicode character data of variable length. `NVARCHAR(MAX)` can store up to 2GB of data. `NVARCHAR(MAX)` is a SQL Server-specific data type that is not part of the ANSI SQL standard. `NVARCHAR(MAX)` is used when you need to store large amounts of Unicode character data (more than 4000 characters).
+
+**`AUTO_INCREMENT` to `IDENTITY`**: `IDENTITY` the name used for `AUTO_INCREMENT` in SQL Server. The effect is the same.
+
+**`CURRENT_TIMESTAMP` to `GETDATE()`**: The function name is different but the use is exactly the same.
+
+**`VISIBLE` is  not necessary**: It is the default for SQL server so it is ommitted from the create table statement.
+
+### SQLite
+
+The following changes need to be made for SQLite:
+
+**`TIMESTAMP` to `TEXT`**: SQLite doesn't support the `TIMESTAMP` data type. It is recommended to use `TEXT` instead of `TIMESTAMP` for SQLite.
+
+**`CHAR` and `VARCHAR` to `TEXT`**: `CHAR` and `VARCHAR` are the same as `TEXT` in SQLite, and all of which have no length limit in SQLite.
+
+**`DECIMAL` to `INT` or `TEXT`**: SQLite doesn't support `DECIMAL` data type. `REAL` is typically used instead of `DECIMAL` in SQLite when precision doesn't matter. When precision matters, `INT` or `TEXT` are typically used in practice for decimal numbers.
+
+**Character encodings not supported**: SQLite uses UTF-8 by default.
+
+**`AUTO_INCREMENT` to `INTEGER PRIMARY KEY`**: As long as a column is a primary key and integer the auto-incrementing effect is automatic.
+
+**`VISIBLE` is  not necessary**: It is the default for SQLite so it is ommitted from the create table statement.
+
+**`CURRENT_TIMESTAMP` to `datetime('now')`**: Use is exactly the same just the syntax is different.
