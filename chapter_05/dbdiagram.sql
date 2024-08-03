@@ -25,7 +25,6 @@ CREATE TABLE payment_method (
   name VARCHAR(30),
   card_number CHAR(16),
   expiry_date CHAR(4),
-  csc CHAR(4),
   email VARCHAR(320),
   CONSTRAINT fk_payment_method_user FOREIGN KEY (email) REFERENCES user (email)
 );
