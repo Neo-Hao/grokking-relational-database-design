@@ -81,8 +81,8 @@ DROP TABLE IF EXISTS payment_method;
 CREATE TABLE payment_method (
   payment_id INT PRIMARY KEY,
   name VARCHAR(30) NOT NULL,
-  card_number CHAR(16) NOT NULL,
-  expiry_date CHAR(4) NOT NULL,
+  card_number CHAR(45) NOT NULL,
+  expiry_date CHAR(45) NOT NULL,
   email VARCHAR(320) NOT NULL,
   address_id INT NOT NULL,
   CONSTRAINT fk_payment_method_user 
