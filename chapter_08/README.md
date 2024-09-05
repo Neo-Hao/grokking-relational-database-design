@@ -30,7 +30,7 @@ When you import the provided script into dbdiagram.io, you will be able to view 
 
 You can refer to [the manual of diagram.io](https://dbdiagram.io/docs/) if you have any questions about diagram.io.
 
-<!-- ## View or edit the E-R diagram via MySQL Workbench
+## View or edit the E-R diagram via MySQL Workbench
 
 MySQL Workbench is an administration tool for MySQL as much as an E-R diagramming software. Different from dbdiagram.io, MySQL Workbench is a desktop application that you need to install on your computer. Additionally, MySQL only supports MySQL as the RDBMS. However, you can use use MySQL Workbench to generate a MySQL script first, and then convert it to scripts for other RSBMS using SQL converter tools such as [SQLines](https://sqlines.com/online).
 
@@ -61,7 +61,7 @@ There are extensive tutorials for how to use MySQL Workbench for Database Design
 3. Follow the installation instructions from the installer.
 4. Once installed, double-click on the file or use File -> Open Model ... from within MySQL Workbench.
 5. The file (`workbench.mwb`) is a MySQL Workbench Document that allows you to edit entity relationship diagrams and generate SQL CREATE TABLE statements based on these diagrams. The current file contains all entities as described in their final state in Chapter 7.
-6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes. -->
+6. Once you see the entities you can freely double-click and evaluate them as well as make any necessary changes. 
 
 ## Modifications to attributes for different RDBMS
 
