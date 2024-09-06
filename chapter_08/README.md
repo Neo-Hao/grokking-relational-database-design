@@ -69,38 +69,62 @@ You will need to make some modifications to the attributes for different RDBMS. 
 
 ### MySQL, MariaDB, and PostgreSQL
 
-The entities and attributes depicted in the E-R diagram don't require any modifications for MySQL, MariaDB, and PostgreSQL.
+The entities and attributes depicted in the E-R diagram don't require any modifications for MySQL and MariaDB.
+
+### PostgreSQL
+
+The following changes need to be made for PostgreSQL:
+
+**Replace `INT AUTO_INCREMENT` with `SERIAL`**: PostgreSQL uses `SERIAL` for auto-incrementing integer columns.
+
+**Change `YEAR` to `SMALLINT`**: PostgreSQL doesn't have a specific `YEAR` type. `SMALLINT` is typically used for year values.
+
+**Consider using `TEXT` instead of `VARCHAR`**: While PostgreSQL supports `VARCHAR`, `TEXT` is often preferred as it has no length limit.
+
+**Replace `NUMERIC` with `DECIMAL`**: PostgreSQL supports both `NUMERIC` and `DECIMAL` as synonyms, but `DECIMAL` is more commonly used.
+
+**Adjust `CHECK` constraints**: The syntax is slightly different in PostgreSQL, but the concept remains the same.
+
+**Modify foreign key constraint syntax**: While the concept is the same, the syntax for defining foreign key constraints might need slight adjustments for PostgreSQL.
 
 ### SQL Server
 
 The following changes need to be made for SQL Server:
 
-**`TIMESTAMP` to `DATETIMEOFFSET`**:  SQL Server uses DATETIMEOFFSET instead of TIMESTAMP. DATETIMEOFFSET stores the date, time, and offset from UTC. DATETIMEOFFSET is a SQL Server-specific data type that is not part of the ANSI SQL standard. DATETIMEOFFSET is used when you need to store the time zone offset of a particular date and time value.
+**Change `INT AUTO_INCREMENT` to `INT IDENTITY(1,1)`**: SQL Server uses `IDENTITY(1,1)` for auto-incrementing columns.
 
-**`VARCHAR` to `NVARCHAR`**: It is recommended to use `NVARCHAR` instead of `VARCHAR` for SQL Server. `VARCHAR` is used for non-Unicode character data. It stores ASCII characters and can represent a limited set of characters (specifically those in the code page of your server's collation setting). `NVARCHAR` is used for Unicode character data -- It can store characters from multiple languages and alphabets and uses two bytes per character.If your application needs to support multiple languages or special characters that are not represented in the default character set, then you should use `NVARCHAR`.
+**Change `VARCHAR` to `NVARCHAR`**: While `VARCHAR` exists in SQL Server, `NVARCHAR` is generally preferred for better Unicode support.
 
-**`TEXT` to `NVARCHAR(MAX)`**: `TEXT` is a deprecated data type in SQL Server. It is recommended to use `NVARCHAR(MAX)` instead of `TEXT`. `NVARCHAR(MAX)` is used for Unicode character data of variable length. `NVARCHAR(MAX)` can store up to 2GB of data. `NVARCHAR(MAX)` is a SQL Server-specific data type that is not part of the ANSI SQL standard. `NVARCHAR(MAX)` is used when you need to store large amounts of Unicode character data (more than 4000 characters).
+**Change `CHAR` to `NCHAR`**: For fixed-length character fields, use `NCHAR` in SQL Server for Unicode support.
 
-**`AUTO_INCREMENT` to `IDENTITY`**: `IDENTITY` the name used for `AUTO_INCREMENT` in SQL Server. The effect is the same.
+**Change `NUMERIC` to `DECIMAL`**: While SQL Server supports both `NUMERIC` and `DECIMAL`, `DECIMAL` is more commonly used.
 
-**`CURRENT_TIMESTAMP` to `GETDATE()`**: The function name is different but the use is exactly the same.
+**Change `YEAR` to `SMALLINT`**: SQL Server doesn't have a specific `YEAR` type. `SMALLINT` is typically used for year values.
 
-**`VISIBLE` is  not necessary**: It is the default for SQL server so it is ommitted from the create table statement.
+**Adjust `CHECK` constraints**: The syntax is slightly different in SQL Server, but the concept remains the same.
+
+**Modify foreign key constraint syntax**: While the concept is the same, the syntax for defining foreign key constraints is slightly different in SQL Server.
 
 ### SQLite
 
 The following changes need to be made for SQLite:
 
-**`TIMESTAMP` to `TEXT`**: SQLite doesn't support the `TIMESTAMP` data type. It is recommended to use `TEXT` instead of `TIMESTAMP` for SQLite.
-
-**`CHAR` and `VARCHAR` to `TEXT`**: `CHAR` and `VARCHAR` are the same as `TEXT` in SQLite, and all of which have no length limit in SQLite.
-
-**`DECIMAL` to `INT` or `TEXT`**: SQLite doesn't support `DECIMAL` data type. `REAL` is typically used instead of `DECIMAL` in SQLite when precision doesn't matter. When precision matters, `INT` or `TEXT` are typically used in practice for decimal numbers.
-
 **Character encodings not supported**: SQLite uses UTF-8 by default.
 
-**`AUTO_INCREMENT` to `INTEGER PRIMARY KEY`**: As long as a column is a primary key and integer the auto-incrementing effect is automatic.
+**Remove `AUTO_INCREMENT`**: SQLite doesn't support `AUTO_INCREMENT`. Instead, you can use `INTEGER PRIMARY KEY` which will auto-increment automatically.
 
-**`VISIBLE` is  not necessary**: It is the default for SQLite so it is ommitted from the create table statement.
+**Change `INT` to `INTEGER`**: While SQLite will usually accept `INT`, it's best practice to use `INTEGER`.
 
-**`CURRENT_TIMESTAMP` to `datetime('now')`**: Use is exactly the same just the syntax is different.
+**Change `CHAR` to `TEXT`**: SQLite doesn't have a `CHAR` type. Use `TEXT` instead.
+
+**Change `VARCHAR` to `TEXT`**: SQLite doesn't have a `VARCHAR` type. Use `TEXT` instead.
+
+**Change `NUMERIC` to `REAL`**: For floating-point numbers, use `REAL` in SQLite.
+
+**Remove `YEAR` type**: SQLite doesn't have a specific `YEAR` type. Use `INTEGER` instead.
+
+**Remove size specifications**: SQLite doesn't use size specifications for text fields (e.g., `VARCHAR(100)` becomes just `TEXT`).
+
+**Adjust `CHECK` constraints**: The syntax is slightly different in SQLite. You'll need to wrap the condition in parentheses.
+
+**Adjust foreign key constraints**: SQLite supports foreign key constraints, but the syntax is slightly different and you need to enable foreign key support explicitly.

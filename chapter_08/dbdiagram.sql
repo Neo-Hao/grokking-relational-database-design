@@ -84,11 +84,11 @@ CREATE TABLE dealer (
   name VARCHAR(100) NOT NULL,
   email_address VARCHAR(100) UNIQUE NOT NULL,
   website_url VARCHAR(255) NOT NULL,
-  customer_phone_number CHAR(15) NOT NULL,
+  dealer_phone_number CHAR(15) NOT NULL,
   country_id INT NOT NULL,
   address_id INT NOT NULL,
   CONSTRAINT unique_dealer_phone_number
-    UNIQUE (country_id, customer_phone_number),
+    UNIQUE (country_id, dealer_phone_number),
   CONSTRAINT fk_dealer_country_id
     FOREIGN KEY (country_id) 
     REFERENCES country(country_id)
@@ -106,10 +106,9 @@ CREATE TABLE customer (
   customer_id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
   email_address VARCHAR(100) UNIQUE NOT NULL,
-  country_id INT NOT NULL,
   customer_phone_number CHAR(15) NOT NULL,
+  country_id INT NOT NULL,
   address_id INT NOT NULL,
-  dealer_id INT NOT NULL,
   CONSTRAINT unique_customer_phone_number 
     UNIQUE (country_id, customer_phone_number),
   CONSTRAINT fk_customer_country_id
@@ -121,10 +120,23 @@ CREATE TABLE customer (
     FOREIGN KEY (address_id) 
     REFERENCES address(address_id)
     ON DELETE NO ACTION
+    ON UPDATE CASCADE
+);
+
+-- Create customer_dealer table
+CREATE TABLE customer_dealer (
+  customer_id INT NOT NULL,
+  dealer_id INT NOT NULL,
+  CONSTRAINT pk_customer_dealer
+    PRIMARY KEY (customer_id, dealer_id),
+  CONSTRAINT fk_customer_dealer_customer
+    FOREIGN KEY (customer_id) 
+    REFERENCES customer(customer_id)
+    ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT fk_customer_dealer
+  CONSTRAINT fk_customer_dealer_dealer
     FOREIGN KEY (dealer_id) 
     REFERENCES dealer(dealer_id)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE CASCADE
 );
