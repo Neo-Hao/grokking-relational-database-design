@@ -107,6 +107,7 @@ Country: country - CHAR(2)
 Primary key: address_id
 Note 1: suburb and postal_code are optional
 """
+```
 
 4. Relationship Identification
 
