@@ -1,4 +1,4 @@
-# Relationships
+# Normalization and Implementation
 
 Practioners use tools such as dbdiagram.io, LucidChart, or MySQL Workbench to create and edit E-R diagrams.
 

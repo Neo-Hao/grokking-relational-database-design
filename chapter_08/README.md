@@ -1,4 +1,4 @@
-# Relationships
+# Database Design in the Age of Generative AI
 
 Practioners use tools such as dbdiagram.io, LucidChart, or MySQL Workbench to create and edit E-R diagrams.
 
@@ -12,6 +12,8 @@ The final state of entities as described in Chapter 8 is as follows:
 <img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'50%';">
 
 <!-- <img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'70%';"> -->
+
+The questions/requests used to generate ChatGPT responses can be found in <a href="./chatgpt_request.md">chatgpt_requests.md</a>.
 
 ## View or edit the E-R diagram via dbdiagram
 
