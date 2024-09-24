@@ -5,13 +5,13 @@ Practioners use tools such as dbdiagram.io, LucidChart, or MySQL Workbench to cr
 The corresponding chapter in this book developed the entities and their attributes for the database of The Sci-fi Collective. You can find the developed entities and their relationships, as well as how to load (or check) them using corresponding tools.
 
 - [View or edit the E-R diagram via dbdiagram](#view-or-edit-the-e-r-diagram-via-dbdiagram)
-<!-- - [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench) -->
+- [View or edit the E-R diagram via MySQL Workbench](#view-or-edit-the-e-r-diagram-via-mysql-workbench)
 
 The final state of entities as described in Chapter 8 is as follows:
 
 <img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'50%';">
 
-<!-- <img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'70%';"> -->
+<img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'70%';">
 
 The questions/requests used to generate ChatGPT responses can be found in <a href="./chatgpt_request.md">chatgpt_requests.md</a>.
 
