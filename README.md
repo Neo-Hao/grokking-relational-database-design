@@ -25,8 +25,8 @@ There are currently 8 chapters planned for this book. The following table of con
 - Chapter 3 - Overview of Database Design (*No code*)
 - Chapter 4 - Entities and Attributes ([code](./chapter_04/))
 - Chapter 5 - Relationships ([code](./chapter_05/))
-- Chapter 6 - Normalization ([code](./chapter_06/))
-- Chapter 7 - Optimization  ([code](./chapter_07/))
+- Chapter 6 - Normalization and Implementation ([code](./chapter_06/))
+- Chapter 7 - Security and Optimization  ([code](./chapter_07/))
 - Chapter 8 - Database Design in the Age of Generative AI ([code](./chapter_08/))
 
 Interested? You can [check out this book on Manning](http://mng.bz/1J2q) directly, and start reading now.
