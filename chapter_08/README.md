@@ -9,9 +9,9 @@ The corresponding chapter in this book developed the entities and their attribut
 
 The final state of entities as described in Chapter 8 is as follows:
 
-<img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'50%';">
+<!-- <img src="./images/dbdiagram.png" alt="dbdiagram" style="width:'50%';"> -->
 
-<img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'70%';">
+<img src="./images/er-diagram.png" alt="e-r-diagram" style="width:'50%';">
 
 The questions/requests used to generate ChatGPT responses can be found in <a href="./chatgpt_request.md">chatgpt_requests.md</a>.
 
