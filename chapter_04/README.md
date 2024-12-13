@@ -66,9 +66,13 @@ There are extensive tutorials for how to use MySQL Workbench for Database Design
 
 You will need to make some modifications to the attributes for different RDBMS. Considering that this chapter is not the end of the E-R diagram that we are still developing, we won't provide different versions of the E-R diagram tailored to different RDBMS. Instead, we will only describe the necessary modifications for SQL Server, SQLite and Oracle below for your reference.
 
-### MySQL, MariaDB, and PostgreSQL
+### MySQL and MariaDB
 
-The entities and attributes depicted in the E-R diagram don't require any modifications for MySQL, MariaDB, and PostgreSQL.
+The entities and attributes depicted in the E-R diagram don't require any modifications for MySQL and MariaDB.
+
+### PostgreSQL
+
+`user` is a reserved keyword in PostgreSQL. You can't use it as a table name. You can use `system_user` instead of `user`.
 
 ### SQL Server
 
