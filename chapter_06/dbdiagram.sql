@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS billing_address (
   city VARCHAR(100) NOT NULL,
   state VARCHAR(20) NOT NULL,
   postal_code CHAR(5) NOT NULL,
-  PRIMARY KEY (email),
+  PRIMARY KEY (payment_id),
   CONSTRAINT fk_billing_address_payment_id
     FOREIGN KEY (payment_id)
     REFERENCES payment_method (payment_id)

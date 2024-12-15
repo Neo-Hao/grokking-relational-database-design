@@ -17,6 +17,28 @@ COLLATE utf8_general_ci;
 
 USE scificollective_chapter7;
 
+
+-- Table state
+CREATE TABLE IF NOT EXISTS state (
+  state_id CHAR(2) PRIMARY KEY,
+  state VARCHAR(20) NOT NULL
+);
+
+-- Table address
+CREATE TABLE IF NOT EXISTS address (
+  address_id INT PRIMARY KEY AUTO_INCREMENT,
+  street_address VARCHAR(255) NOT NULL,
+  address_line_optional VARCHAR(100),
+  city VARCHAR(100) NOT NULL,
+  postal_code CHAR(5) NOT NULL,
+  state_id CHAR(2) NOT NULL,
+  CONSTRAINT fk_address_state
+    FOREIGN KEY (state_id)
+    REFERENCES state (state_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
 -- Table user
 DROP TABLE IF EXISTS user;
 CREATE TABLE IF NOT EXISTS user (
@@ -115,27 +137,6 @@ CREATE TABLE purchase (
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   INDEX idx_purchase_email (email)
-);
-
--- Table state
-CREATE TABLE IF NOT EXISTS state (
-  state_id CHAR(2) PRIMARY KEY,
-  state VARCHAR(20) NOT NULL
-);
-
--- Table address
-CREATE TABLE IF NOT EXISTS address (
-  address_id INT PRIMARY KEY AUTO_INCREMENT,
-  street_address VARCHAR(255) NOT NULL,
-  address_line_optional VARCHAR(100),
-  city VARCHAR(100) NOT NULL,
-  postal_code CHAR(5) NOT NULL,
-  state_id CHAR(2) NOT NULL,
-  CONSTRAINT fk_address_state
-    FOREIGN KEY (state_id)
-    REFERENCES state (state_id)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
 );
 
 -- Table purchase_product

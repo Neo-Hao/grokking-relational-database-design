@@ -37,31 +37,6 @@ CREATE TABLE model (
     ON UPDATE CASCADE
 );
 
--- Create spaceship table
-CREATE TABLE spaceship (
-  serial_number CHAR(17) PRIMARY KEY,
-  recommended_price NUMERIC(8, 2) CHECK (recommended_price >= 0) NOT NULL,
-  year YEAR CHECK (year >= 1900) NOT NULL,
-  model_number CHAR(4) NOT NULL,
-  dealer_id INT,
-  customer_id INT,
-  CONSTRAINT fk_model_spaceship
-    FOREIGN KEY (model_number) 
-    REFERENCES model(model_number)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE,
-  CONSTRAINT fk_dealer_spaceship 
-    FOREIGN KEY (dealer_id) 
-    REFERENCES dealer(dealer_id)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE,
-  CONSTRAINT fk_customer_spaceship 
-    FOREIGN KEY (customer_id) 
-    REFERENCES customer(customer_id)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE
-);
-
 -- Create address table
 CREATE TABLE address (
   address_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -120,6 +95,31 @@ CREATE TABLE customer (
     FOREIGN KEY (address_id) 
     REFERENCES address(address_id)
     ON DELETE NO ACTION
+    ON UPDATE CASCADE
+);
+
+-- Create spaceship table
+CREATE TABLE spaceship (
+  serial_number CHAR(17) PRIMARY KEY,
+  recommended_price NUMERIC(8, 2) CHECK (recommended_price >= 0) NOT NULL,
+  year YEAR CHECK (year >= 1900) NOT NULL,
+  model_number CHAR(4) NOT NULL,
+  dealer_id INT,
+  customer_id INT,
+  CONSTRAINT fk_model_spaceship
+    FOREIGN KEY (model_number) 
+    REFERENCES model(model_number)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE,
+  CONSTRAINT fk_dealer_spaceship 
+    FOREIGN KEY (dealer_id) 
+    REFERENCES dealer(dealer_id)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE,
+  CONSTRAINT fk_customer_spaceship 
+    FOREIGN KEY (customer_id) 
+    REFERENCES customer(customer_id)
+    ON DELETE SET NULL
     ON UPDATE CASCADE
 );
 
