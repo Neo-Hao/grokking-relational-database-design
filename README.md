@@ -1,6 +1,6 @@
 # Grokking Relational Database Design
 
-[<img src="images/Hao-HI-MEAP.jpg">](https://mng.bz/1J2q)
+[<img src="images/Hao-Hi.png">](https://mng.bz/1J2q)
 
 **A friendly illustrated guide to designing and implementing your first database.**
 
