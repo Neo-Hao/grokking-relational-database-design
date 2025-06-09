@@ -4,9 +4,9 @@
 
 **A friendly illustrated guide to designing and implementing your first database.**
 
-A well-constructed database is easy to understand, query, manage, and scale when your app needs to grow. In Grokking Relational Database Design you’ll learn the basics of relational database design including how to name fields and tables, which data to store where, how to eliminate repetition, good practices for data collection and hygiene, and much more. You won’t need a computer science degree or in-depth knowledge of programming—the book’s practical examples and down-to-earth definitions are beginner-friendly.
+A well-constructed database is easy to understand, query, manage, and scale when your app needs to grow. In Grokking Relational Database Design you'll learn the basics of relational database design including how to name fields and tables, which data to store where, how to eliminate repetition, good practices for data collection and hygiene, and much more. You won't need a computer science degree or in-depth knowledge of programming—the book's practical examples and down-to-earth definitions are beginner-friendly.
 
-In [Grokking Relational Database Design](https://mng.bz/1J2q), you’ll learn how to:
+In [Grokking Relational Database Design](https://mng.bz/1J2q), you'll learn how to:
 
 - Query and create databases using Structured Query Language (SQL)
 - Design databases from scratch
@@ -16,9 +16,7 @@ In [Grokking Relational Database Design](https://mng.bz/1J2q), you’ll learn ho
 
 ## Table of contents (for this code repo)
 
-[This book](https://mng.bz/1J2q) is currently in the Manning Early Access Program (MEAP). Via MEAP, you can read chapters as they are written, and get the finished version as soon as it’s ready, and receive the print book long before it's in bookstores.
-
-There are currently 8 chapters planned for this book. The following table of contents lists the chapters that are currently available in the MEAP, and the chapters that are planned for the final book.
+[This book](https://mng.bz/1J2q) is publised by Manning Publications. The print, ebook, and audio versions are available at https://mng.bz/1J2q. There are 8 chapters planned for this book. The table of contents are as follows:
 
 - Chapter 1 - Introduction to Database and SQL ([code](./chapter_01/))
 - Chapter 2 - Related Tables and More SQL ([code](./chapter_02/))
@@ -32,4 +30,5 @@ There are currently 8 chapters planned for this book. The following table of con
 Interested? You can [check out this book on Manning](https://mng.bz/1J2q) directly, and start reading now.
 
 ## Authors
-[Qiang Hao](https://qhao.info/) ([@Neo-Hao](https://github.com/Neo-Hao)) and [Michail Tsikerdekis](https://michael.tsikerdekis.com) ([@tsikerdekis](https://github.com/tsikerdekis))
+
+[Qiang Hao](https://www.youtube.com/@structuredcs) ([@structuredcs](https://www.youtube.com/@structuredcs)) and [Michail Tsikerdekis](https://michael.tsikerdekis.com) ([@tsikerdekis](https://github.com/tsikerdekis))
