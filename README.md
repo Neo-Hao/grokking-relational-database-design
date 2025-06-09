@@ -16,7 +16,7 @@ In [Grokking Relational Database Design](https://mng.bz/1J2q), you'll learn how 
 
 ## Table of contents (for this code repo)
 
-[This book](https://mng.bz/1J2q) is publised by Manning Publications. The print, ebook, and audio versions are available at https://mng.bz/1J2q. There are 8 chapters planned for this book. The table of contents are as follows:
+[This book](https://mng.bz/1J2q) is publised by Manning Publications. The print, ebook, and audio versions are available at https://mng.bz/1J2q. There are 8 chapters in this book. The table of contents are as follows:
 
 - Chapter 1 - Introduction to Database and SQL ([code](./chapter_01/))
 - Chapter 2 - Related Tables and More SQL ([code](./chapter_02/))
