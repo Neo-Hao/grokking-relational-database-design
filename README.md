@@ -13,10 +13,11 @@ In [Grokking Relational Database Design](https://mng.bz/1J2q), you'll learn how 
 - Implement and optimize database designs
 - Take advantage of generative AI when designing databases
 
+Interested? You can watch [one or two educational videos based on this book](https://www.youtube.com/playlist?list=PL3fg3zQpW0k4UO9eBDLdroADnB18ZAOgj), or [check out this book on Manning](https://mng.bz/1J2q) directly, and start reading now.
 
 ## Table of contents (for this code repo)
 
-[This book](https://mng.bz/1J2q) is publised by Manning Publications. The print, ebook, and audio versions are available at https://mng.bz/1J2q. There are 8 chapters in this book. The table of contents is as follows:
+[This book](https://mng.bz/1J2q) is publised by Manning Publications. The print, ebook, and audio versions are available on both [Manning Publications](https://mng.bz/1J2q) and [Amazon](https://www.amazon.com/Grokking-Relational-Database-Design-Qiang/dp/1633437418). There are 8 chapters in this book. The table of contents is as follows:
 
 - Chapter 1 - Introduction to Database and SQL ([code](./chapter_01/))
 - Chapter 2 - Related Tables and More SQL ([code](./chapter_02/))
@@ -26,8 +27,6 @@ In [Grokking Relational Database Design](https://mng.bz/1J2q), you'll learn how 
 - Chapter 6 - Normalization and Implementation ([code](./chapter_06/))
 - Chapter 7 - Security and Optimization  ([code](./chapter_07/))
 - Chapter 8 - Database Design in the Age of Generative AI ([code](./chapter_08/))
-
-Interested? You can [check out this book on Manning](https://mng.bz/1J2q) directly, and start reading now.
 
 ## Authors
 
